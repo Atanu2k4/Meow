@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/PROJECTS/ONGOING/Meow/meow/app/page.tsx"],"sourcesContent":["import CatEyes from \"./components/CatEyes\";\nimport Timer from \"./components/Timer\";\n\nexport default function Home() {\n  return (\n    <main className=\"container\">\n      <CatEyes />\n      <Timer />\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;AAGe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;;0BACd,8OAAC;;;;;0BACD,8OAAC;;;;;;;;;;;AAGP"}}]
+}
