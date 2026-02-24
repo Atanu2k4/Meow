@@ -21,8 +21,8 @@
 }
 
 .dark {
-  --background: #0a0a0a;
-  --background-rgb: 10, 10, 10;
+  --background: #000000;
+  --background-rgb: 0, 0, 0;
   --foreground: #ededed;
   --foreground-rgb: 237, 237, 237;
   --eye-bg: #1a1a1a;

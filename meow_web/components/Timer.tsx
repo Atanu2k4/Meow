@@ -165,14 +165,74 @@ export default function Timer({
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="timer-container"
         >
+            <div className="display-wrapper">
+                {formatted.h && (
+                    <>
+                        <span className="digit">{formatted.h}</span>
+                        <span className="separator">:</span>
+                    </>
+                )}
+                <span className="digit">{formatted.m}</span>
+                <span className="separator">:</span>
+                <span className="digit">{formatted.s}</span>
+            </div>
+
+            <div className="controls-layer">
+                <AnimatePresence mode="wait">
+                    {timerState !== "running" ? (
+                        <motion.button
+                            key="play-btn"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.2 }}
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={start}
+                            className="icon-btn"
+                            aria-label="Start"
+                        >
+                            <PlayIcon />
+                        </motion.button>
+                    ) : (
+                        <motion.button
+                            key="pause-btn"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.2 }}
+                            whileHover={{ scale: 1.15 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={pause}
+                            className="icon-btn"
+                            aria-label="Pause"
+                        >
+                            <PauseIcon />
+                        </motion.button>
+                    )}
+                </AnimatePresence>
+
+                <motion.button
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    whileHover={{ scale: 1.15, rotate: -30 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={restart}
+                    className="icon-btn secondary"
+                    aria-label="Restart"
+                >
+                    <RestartIcon />
+                </motion.button>
+            </div>
+
             <div className="settings-layer">
                 <AnimatePresence mode="wait">
                     {mode === "countdown" && (
                         <motion.div
                             key="countdown-settings"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="duration-presets-wrapper"
                         >
@@ -204,137 +264,30 @@ export default function Timer({
                 </AnimatePresence>
             </div>
 
-            <div className="display-wrapper">
-                {formatted.h && (
-                    <>
-                        <span className="digit">{formatted.h}</span>
-                        <span className="separator">:</span>
-                    </>
-                )}
-                <span className="digit">{formatted.m}</span>
-                <span className="separator">:</span>
-                <span className="digit">{formatted.s}</span>
-            </div>
-
-            <div className="controls-layer">
-                <AnimatePresence mode="wait">
-                    {timerState !== "running" ? (
-                        <motion.button
-                            key="play-btn"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            transition={{ duration: 0.2 }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={start}
-                            className="icon-btn"
-                            aria-label="Start"
-                        >
-                            <PlayIcon />
-                        </motion.button>
-                    ) : (
-                        <motion.button
-                            key="pause-btn"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            transition={{ duration: 0.2 }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={pause}
-                            className="icon-btn active"
-                            aria-label="Pause"
-                        >
-                            <PauseIcon />
-                        </motion.button>
-                    )}
-                </AnimatePresence>
-
-                <motion.button
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05, rotate: -30 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={restart}
-                    className="icon-btn secondary"
-                    aria-label="Restart"
-                >
-                    <RestartIcon />
-                </motion.button>
-            </div>
-
             <style jsx>{`
         .timer-container {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 60px;
+          gap: 12px;
           user-select: none;
           max-width: 600px;
           width: 100%;
+          margin-top: 40px;
+          position: relative; /* Anchor for absolute settings */
         }
 
         .settings-layer {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 24px;
+          gap: 16px;
           width: 100%;
-        }
-
-        .mode-toggle-wrapper {
-            padding: 2px;
-            background: rgba(var(--foreground-rgb), 0.03);
-            border-radius: 40px;
-            border: 1px solid rgba(var(--foreground-rgb), 0.08);
-            backdrop-filter: blur(8px);
-        }
-
-        .mode-toggle {
-          display: flex;
-          position: relative;
-          width: 280px;
-          height: 44px;
-        }
-
-        .mode-indicator {
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: calc(50% - 2px);
-            height: calc(100% - 4px);
-            background: var(--foreground);
-            border-radius: 38px;
-            z-index: 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .mode-btn {
-          flex: 1;
-          border-radius: 38px;
-          border: none;
-          background: transparent;
-          color: var(--foreground);
-          font-family: inherit;
-          font-size: 14px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: color 0.3s ease;
-          position: relative;
-          z-index: 1;
-        }
-
-        .mode-btn.active {
-          color: var(--background);
-        }
-
-        .mode-btn:not(.active) {
-            opacity: 0.6;
-        }
-        
-        .mode-btn:not(.active):hover {
-            opacity: 1;
+          padding-top: 24px;
         }
 
         .duration-presets-wrapper {
@@ -351,78 +304,77 @@ export default function Timer({
         }
 
         .preset-btn {
-          padding: 8px 16px;
-          border-radius: 12px;
-          border: 1px solid rgba(var(--foreground-rgb), 0.1);
-          background: rgba(var(--foreground-rgb), 0.02);
+          padding: 8px 12px;
+          border-radius: 0;
+          border: none;
+          background: transparent;
           color: var(--foreground);
+          opacity: 0.4;
           font-family: 'Pixelify Sans', var(--font-pixel);
-          font-size: 15px;
+          font-size: 14px;
           cursor: pointer;
           transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          border-bottom: 2px solid transparent;
         }
 
         .preset-btn:hover {
-          background: rgba(var(--foreground-rgb), 0.05);
-          border-color: rgba(var(--foreground-rgb), 0.3);
+          opacity: 1;
           transform: translateY(-2px);
         }
 
         .preset-btn.selected {
-          border-color: var(--foreground);
-          background: var(--foreground);
-          color: var(--background);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          opacity: 1;
+          border-bottom-color: var(--foreground);
         }
 
         .custom-input-form {
           display: flex;
           align-items: center;
-          margin-left: 8px;
+          margin-left: 12px;
         }
 
         .custom-input-wrapper {
             display: flex;
             align-items: center;
-            background: rgba(var(--foreground-rgb), 0.03);
-            border: 1px solid rgba(var(--foreground-rgb), 0.1);
-            border-radius: 12px;
-            padding: 2px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
+            padding: 0;
             transition: all 0.2s ease;
         }
 
         .custom-input-wrapper:focus-within {
-            border-color: var(--foreground);
-            background: transparent;
-            box-shadow: 0 0 0 2px rgba(var(--foreground-rgb), 0.05);
+            border-bottom-color: var(--foreground);
         }
 
         .custom-input {
-          width: 50px;
-          padding: 6px 8px;
+          width: 45px;
+          padding: 6px 4px;
           border: none;
           background: transparent;
           color: var(--foreground);
           font-family: 'Pixelify Sans', var(--font-pixel);
-          font-size: 15px;
+          font-size: 14px;
           text-align: center;
           outline: none;
         }
 
         .custom-submit-btn {
-          padding: 6px 12px;
-          border-radius: 9px;
+          padding: 6px 10px;
           border: none;
-          background: var(--foreground);
-          color: var(--background);
-          font-size: 12px;
-          font-weight: 700;
+          background: transparent;
+          color: var(--foreground);
+          font-[700];
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          opacity: 0.4;
           cursor: pointer;
-          transition: opacity 0.2s ease;
+          transition: all 0.2s ease;
         }
 
         .custom-submit-btn:hover {
-          filter: brightness(1.2);
+          opacity: 1;
         }
 
         .display-wrapper {
@@ -438,7 +390,7 @@ export default function Timer({
           transition: color 0.3s ease;
           pointer-events: none;
           user-select: none;
-          margin: 10px 0;
+          margin: 0;
         }
 
         .digit {
@@ -454,67 +406,52 @@ export default function Timer({
 
         .controls-layer {
           display: flex;
-          gap: 32px;
+          gap: 24px;
           align-items: center;
           justify-content: center;
-          min-height: 80px;
+          min-height: 48px;
+          margin-top: 10px;
         }
 
         .icon-btn {
-          width: 72px;
-          height: 72px;
-          border-radius: 50%;
-          border: 2px solid var(--foreground);
-          background: var(--foreground);
-          color: var(--background);
+          background: transparent;
+          border: none;
+          color: var(--foreground);
           display: flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+          padding: 8px;
+          opacity: 0.8;
+        }
+
+        .icon-btn:hover {
+          opacity: 1;
+          transform: scale(1.1);
         }
 
         .icon-btn.secondary {
-          background: transparent;
-          color: var(--foreground);
           opacity: 0.4;
-          border: 1px solid rgba(var(--foreground-rgb), 0.2);
-          box-shadow: none;
-          width: 60px;
-          height: 60px;
         }
 
         .icon-btn.secondary:hover {
           opacity: 1;
-          background: rgba(var(--foreground-rgb), 0.05);
-          border-color: var(--foreground);
-        }
-
-        .icon-btn:not(.secondary):hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-          filter: brightness(1.1);
         }
 
         .icon-btn:active {
-            transform: translateY(0);
+            transform: scale(0.95);
         }
 
         @media (max-width: 640px) {
           .timer-container {
-            gap: 40px;
+            gap: 15px;
+          }
+          .display-wrapper {
+            font-size: clamp(50px, 20vw, 100px);
           }
           .controls-layer {
-            gap: 20px;
-          }
-          .icon-btn {
-            width: 60px;
-            height: 60px;
-          }
-          .icon-btn.secondary {
-            width: 50px;
-            height: 50px;
+            gap: 16px;
           }
         }
       `}</style>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import CatEyes from "@/components/Eyes";
 import Timer from "@/components/Timer";
@@ -14,6 +14,20 @@ export default function Home() {
   const [timerState, setTimerState] = useState<TimerState>("idle");
   const [mode, setMode] = useState<TimerMode>("countup");
   const [catXFraction, setCatXFraction] = useState<number | null>(null);
+  const [userInfo, setUserInfo] = useState({ name: "", avatar: "users-1.svg" });
+
+  // Load user settings
+  const loadUserSettings = useCallback(() => {
+    const name = localStorage.getItem("meow-username") || "";
+    const avatar = localStorage.getItem("meow-avatar") || "users-1.svg";
+    setUserInfo({ name, avatar });
+  }, []);
+
+  useEffect(() => {
+    loadUserSettings();
+    window.addEventListener('user-settings-changed', loadUserSettings);
+    return () => window.removeEventListener('user-settings-changed', loadUserSettings);
+  }, [loadUserSettings]);
 
   const getMoodFromState = (state: TimerState) => {
     switch (state) {
@@ -42,15 +56,36 @@ export default function Home() {
 
       <SettingsButton />
 
+      {/* User Profile Hook */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="fixed top-6 left-6 flex items-center gap-3 z-40 select-none group transition-all"
+      >
+        <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
+          <img
+            src={`/Avatars Icons/users-insights-svg-icons/${userInfo.avatar}`}
+            alt="User avatar"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex flex-col opacity-40 group-hover:opacity-100 transition-opacity">
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] leading-none mb-1">Welcome</span>
+          <span className="text-xs font-bold truncate max-w-[120px]">
+            {userInfo.name || "Guest"}
+          </span>
+        </div>
+      </motion.div>
+
+      <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40">
+        <span className="text-[10px] uppercase tracking-[0.4em] font-bold opacity-40 select-none pointer-events-none transition-opacity duration-500">
+          {timerState === "idle" ? "Ready to focus" : timerState === "running" ? "Deep Work" : "Resting"}
+        </span>
+      </div>
+
       <main className="relative z-10 flex flex-col items-center justify-center -translate-y-8 w-full max-w-4xl px-6">
         <div className="flex flex-col items-center gap-16 w-full">
           <div className="flex flex-col items-center gap-6">
-            <div className="px-4 py-1.5 rounded-full bg-foreground/[0.05] border border-foreground/[0.1] backdrop-blur-sm shadow-sm transition-all hover:bg-foreground/[0.08]">
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold opacity-60">
-                {timerState === "idle" ? "Ready to focus" : timerState === "running" ? "Deep Work" : "Resting"}
-              </span>
-            </div>
-
             <div className="transition-all duration-700 hover:scale-105 active:scale-95 cursor-pointer">
               <CatEyes
                 baseMood={getMoodFromState(timerState)}
@@ -92,7 +127,7 @@ export default function Home() {
             </div>
           </div>
 
-          <span className="text-[9px] tracking-[0.4em] uppercase font-bold opacity-20 pointer-events-none text-center">
+          <span className="text-[9px] tracking-[0.4em] uppercase font-bold opacity-40 pointer-events-none text-center">
             Meow Focus Companion
           </span>
         </div>
