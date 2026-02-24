@@ -2,10 +2,10 @@
 
 import { useEffect, useState, useRef } from "react";
 
-type Mood = "normal" | "happy" | "angry" | "sad" | "surprised" | "blink" | "squint" | "narrow" | "annoyed" | "curious" | "sleeping";
+type Mood = "normal" | "happy" | "angry" | "sad" | "surprised" | "blink" | "squint" | "narrow" | "annoyed" | "curious" | "sleeping" | "waving";
 
 interface CatEyesProps {
-  baseMood: "normal" | "happy" | "angry";
+  baseMood: "normal" | "happy" | "angry" | "waving" | "surprised";
 }
 
 export default function CatEyes({ baseMood }: CatEyesProps) {
@@ -48,13 +48,25 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
   // Sync prop changes to state (base mood changes)
   useEffect(() => {
     if (phase !== "active") return;
-    setCurrentMood((prev) => (prev === "blink" ? prev : baseMood));
-    setRotation(0); // Reset rotation on mood change
+    // Don't interrupt a manual wave with base mood changes
+    setCurrentMood((prev) => (prev === "blink" || prev === "waving" ? prev : baseMood));
+    if (currentMood !== "waving") setRotation(0); // Reset rotation on mood change, unless waving
+  }, [baseMood, phase, currentMood]);
+
+  // Handle specific wave trigger from parent
+  useEffect(() => {
+    if (baseMood === "waving") {
+      setCurrentMood("waving");
+      const timer = setTimeout(() => {
+        setCurrentMood(phase === "active" ? "normal" : baseMood); // Revert to normal or baseMood after waving
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
   }, [baseMood, phase]);
 
   // 1. Independent Blink Loop (Human-like timing)
   useEffect(() => {
-    if (phase !== "active") return;
+    if (phase !== "active" || currentMood === "waving") return; // Pause blink loop if waving
 
     const blinkLoop = () => {
       const nextBlink = Math.random() * 4000 + 2000;
@@ -85,30 +97,65 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
     };
   }, [baseMood, phase, currentMood]);
 
-  // 2. Behavioral Overhaul (Flapping moods, curious tilts, etc.)
+  // 2. Behavioral Overhaul (Flapping moods, complex scanning, and thinking)
   useEffect(() => {
-    if (phase !== "active") return;
+    if (phase !== "active" || currentMood === "waving") return; // Pause behavior loop if waving
 
     const behaviorLoop = () => {
-      const delay = Math.random() * 3000 + 2000;
+      const delay = Math.random() * 2000 + 1000; // Faster intervals for more life
 
       behaviorTimeoutRef.current = setTimeout(() => {
         const action = Math.random();
 
-        // A. Look Around (30% chance)
-        if (action < 0.3) {
-          const xOffset = Math.random() > 0.5 ? 20 : -20;
-          const yOffset = Math.random() * 10 - 5;
-          setPupilOffset({ x: xOffset, y: yOffset });
-          setTimeout(() => setPupilOffset({ x: 0, y: 0 }), 800);
+        // A. Complex Eye Movements (50% chance)
+        if (action < 0.45) { // Adjusted probability slightly to make room for other behaviors
+          const subAction = Math.random();
+
+          // 1. Double Scan (left then right)
+          if (subAction < 0.25) {
+            const firstDir = Math.random() > 0.5 ? 30 : -30;
+            setPupilOffset({ x: firstDir, y: 0 });
+            setTimeout(() => {
+              setPupilOffset({ x: -firstDir, y: 0 });
+              setTimeout(() => setPupilOffset({ x: 0, y: 0 }), 500);
+            }, 700);
+          }
+          // 2. Wide Scan (extreme outer edges)
+          else if (subAction < 0.45) {
+            setPupilOffset({ x: -35, y: 5 });
+            setTimeout(() => {
+              setPupilOffset({ x: 35, y: -5 });
+              setTimeout(() => setPupilOffset({ x: 0, y: 0 }), 800);
+            }, 1000);
+          }
+          // 3. Upward Thinking Look
+          else if (subAction < 0.65) {
+            const side = Math.random() > 0.5 ? 20 : -20;
+            setPupilOffset({ x: side, y: -30 });
+            setTimeout(() => setPupilOffset({ x: 0, y: 0 }), 1200);
+          }
+          // 4. Subtle Vertical Shift (Noodling)
+          else if (subAction < 0.8) {
+            setPupilOffset({ x: 0, y: 20 });
+            setTimeout(() => setPupilOffset({ x: 0, y: 0 }), 400);
+          }
+          // 5. High-Frequency Jitter (Excitement)
+          else {
+            const rx = (Math.random() - 0.5) * 40;
+            const ry = (Math.random() - 0.5) * 20;
+            setPupilOffset({ x: rx, y: ry });
+            setTimeout(() => {
+              setPupilOffset({ x: -rx / 2, y: -ry / 2 });
+              setTimeout(() => setPupilOffset({ x: 0, y: 0 }), 200);
+            }, 200);
+          }
         }
 
         // B. Dynamic Fluctuation (Returning to normal or trying variations)
-        else if (action < 0.7) {
+        else if (action < 0.8) {
           const variation = Math.random();
 
           if (baseMood === "happy") {
-            // Sometimes go back to normal even when running (as requested)
             if (variation < 0.4) {
               setCurrentMood("normal");
               setTimeout(() => setCurrentMood("happy"), 2000);
@@ -122,9 +169,9 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
           }
 
           else if (baseMood === "normal") {
-            if (variation < 0.3) {
+            if (variation < 0.35) {
               setCurrentMood("curious");
-              setRotation(variation < 0.15 ? 12 : -12);
+              setRotation(variation < 0.17 ? 15 : -15);
               setTimeout(() => { setCurrentMood("normal"); setRotation(0); }, 1500);
             } else if (variation < 0.5) {
               setCurrentMood("annoyed");
@@ -151,12 +198,18 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
     return () => {
       if (behaviorTimeoutRef.current) clearTimeout(behaviorTimeoutRef.current);
     };
-  }, [baseMood, phase]);
+  }, [baseMood, phase, currentMood]);
 
   if (!isMounted) return null;
 
   return (
-    <div className="eyes-container relative" style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)' }}>
+    <div
+      className={`eyes-container relative transition-all duration-300 ${currentMood === "waving" ? "waving-face" : ""}`}
+      style={{
+        transform: currentMood === "waving" ? undefined : `rotate(${rotation}deg) translateY(${phase === "active" ? "-5px" : "0px"})`,
+        animation: currentMood === "waving" ? 'wave-body 0.5s ease-in-out infinite' : (phase === "active" ? 'float-container 4s ease-in-out infinite' : 'none')
+      }}
+    >
       {/* Greeting Text */}
       <div
         className={`greeting ${phase === "greeting" ? "visible" : ""}`}
@@ -165,8 +218,14 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
         Hi I'm Meow !!
       </div>
 
-      <div className={`eye left ${currentMood} ${phase === "greeting" ? "hidden-eye" : ""}`}></div>
-      <div className={`eye right ${currentMood} ${phase === "greeting" ? "hidden-eye" : ""}`}></div>
+      <div className={`eye left ${currentMood === "waving" ? "happy" : currentMood} ${phase === "greeting" ? "hidden-eye" : ""}`}></div>
+      <div className={`eye right ${currentMood === "waving" ? "happy" : currentMood} ${phase === "greeting" ? "hidden-eye" : ""}`}></div>
+
+      {/* Waving Hands */}
+      <div className={`hands-container ${currentMood === "waving" ? "visible" : ""}`}>
+        <div className="cat-hand left-hand"></div>
+        <div className="cat-hand right-hand"></div>
+      </div>
 
       {/* Exclamation Mark for Angry Mood */}
       {phase === "active" && (
@@ -176,6 +235,60 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
       )}
 
       <style jsx>{`
+        @keyframes float-container {
+          0%, 100% { transform: rotate(${rotation}deg) translateY(-5px); }
+          50% { transform: rotate(${rotation}deg) translateY(5px); }
+        }
+
+        @keyframes wave-body {
+          0%, 100% { transform: rotate(-5deg) translateX(-5px); }
+          50% { transform: rotate(5deg) translateX(5px); }
+        }
+
+        @keyframes hand-wave-left {
+          0%, 100% { transform: rotate(-20deg) translateY(0); }
+          50% { transform: rotate(-40deg) translateY(-15px); }
+        }
+
+        @keyframes hand-wave-right {
+          0%, 100% { transform: rotate(20deg) translateY(0); }
+          50% { transform: rotate(40deg) translateY(-15px); }
+        }
+
+        .hands-container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .hands-container.visible {
+          opacity: 1;
+        }
+
+        .cat-hand {
+          position: absolute;
+          width: 44px;
+          height: 34px;
+          background: white;
+          border-radius: 22px 22px 14px 14px;
+          bottom: -45px;
+          box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+          filter: blur(0.3px);
+        }
+
+        .left-hand {
+          left: -20px;
+          animation: hand-wave-left 0.5s ease-in-out infinite;
+        }
+
+        .right-hand {
+          right: -20px;
+          animation: hand-wave-right 0.5s ease-in-out infinite;
+        }
+
         .eyes-container {
           display: flex;
           gap: 30px;
@@ -183,7 +296,7 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
           align-items: center;
           margin-bottom: 20px;
           position: relative;
-          min-height: 100px;
+          height: 100px;
         }
 
         .greeting {
@@ -225,16 +338,24 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
           transform: translateX(-50%) rotate(15deg) scale(1.2);
         }
 
+        @keyframes float {
+          0%, 100% { transform: translate(${pupilOffset.x}px, ${pupilOffset.y}px); }
+          50% { transform: translate(${pupilOffset.x}px, ${pupilOffset.y}px) translateY(-3px); }
+        }
+
         .eye {
           width: 90px;
           height: 90px;
           background: white;
-          border-radius: 18px;
-          transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+          border-radius: 20px;
+          transition: 
+            all 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+            clip-path 0.4s cubic-bezier(0.19, 1, 0.22, 1);
           position: relative;
           overflow: hidden;
           opacity: 1;
-          transform: translate(${pupilOffset.x}px, ${pupilOffset.y}px) scale(1);
+          transform: translate(${pupilOffset.x}px, ${pupilOffset.y}px);
+          box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
         }
 
         .hidden-eye {
@@ -287,43 +408,35 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
           border-radius: 50% 50% 0 0;
         }
 
-        /* ANGRY: Slanted inward */
-        .angry { height: 80px; border-radius: 12px; }
-        .angry.left { transform: rotate(-15deg) translate(${pupilOffset.x}px, ${pupilOffset.y}px); }
-        .angry.right { transform: rotate(15deg) translate(${pupilOffset.x}px, ${pupilOffset.y}px); }
-        .angry::before {
-          content: "";
-          position: absolute;
-          top: -20px; left: -20px; right: -20px; height: 50px;
-          background: black;
-          transform: rotate(10deg);
+        /* ANGRY: Slanted inward (Polygonal) */
+        .angry { height: 80px; border-radius: 8px; }
+        .angry.left {
+          clip-path: polygon(0% 0%, 100% 40%, 100% 100%, 0% 100%);
         }
-        .angry.right::before { transform: rotate(-10deg); }
-
-        /* NARROW (Suspicious Angry) */
-        .narrow { height: 50px; border-radius: 8px; }
-        .narrow.left { transform: rotate(-15deg) translate(${pupilOffset.x}px, ${pupilOffset.y}px); }
-        .narrow.right { transform: rotate(15deg) translate(${pupilOffset.x}px, ${pupilOffset.y}px); }
-        .narrow::before {
-          content: "";
-          position: absolute;
-          top: -20px; left: -20px; right: -20px; height: 50px;
-          background: black;
-          transform: rotate(10deg);
+        .angry.right {
+          clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 100%);
         }
-        .narrow.right::before { transform: rotate(-10deg); }
 
-        /* SAD: Droopy eyes */
+        /* NARROW (Serious variant from reference) */
+        .narrow { height: 45px; border-radius: 6px; margin-top: 25px; }
+        .narrow.left {
+          clip-path: polygon(0% 10%, 100% 60%, 100% 100%, 0% 100%);
+        }
+        .narrow.right {
+          clip-path: polygon(0% 60%, 100% 10%, 100% 100%, 0% 100%);
+        }
+
+        /* SAD: Droopy eyes (Polygonal) */
         .sad {
-          border-radius: 40% 40% 20% 20%;
-          height: 70px;
+          height: 75px;
+          border-radius: 15px;
           margin-top: 10px;
         }
-        .sad::after {
-          content: "";
-          position: absolute;
-          top: 0; left: 0; width: 100%; height: 30%;
-          background: rgba(0,0,0,0.1);
+        .sad.left {
+          clip-path: polygon(0% 40%, 100% 10%, 100% 100%, 0% 100%);
+        }
+        .sad.right {
+          clip-path: polygon(0% 10%, 100% 40%, 100% 100%, 0% 100%);
         }
 
         /* ANNOYED: Flat top, squinting from top */
@@ -333,18 +446,25 @@ export default function CatEyes({ baseMood }: CatEyesProps) {
           margin-top: 22px;
         }
 
-        /* CURIOUS: Slightly larger and rounder */
+        /* CURIOUS: Asymmetrical skeptical look */
         .curious {
-          border-radius: 35%;
-          width: 95px;
-          height: 95px;
+          border-radius: 12px;
+        }
+        .curious.left {
+          height: 60px;
+          margin-top: 20px;
+        }
+        .curious.right {
+          height: 70px;
+          clip-path: polygon(0% 10%, 100% 45%, 100% 100%, 0% 100%);
+          margin-top: 10px;
         }
 
         /* SLEEPING: Just a tiny line at the bottom */
         .sleeping {
-          height: 4px !important;
+          height: 6px !important;
           margin-top: 60px;
-          border-radius: 2px;
+          border-radius: 3px;
           width: 80px !important;
           opacity: 0.6;
         }

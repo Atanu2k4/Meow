@@ -92,29 +92,88 @@ function CatEyes({ baseMood }) {
         phase,
         currentMood
     ]);
-    // 2. Behavioral Overhaul (Flapping moods, curious tilts, etc.)
+    // 2. Behavioral Overhaul (Flapping moods, complex scanning, and thinking)
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (phase !== "active") return;
         const behaviorLoop = ()=>{
-            const delay = Math.random() * 3000 + 2000;
+            const delay = Math.random() * 2000 + 1000; // Faster intervals for more life
             behaviorTimeoutRef.current = setTimeout(()=>{
                 const action = Math.random();
-                // A. Look Around (30% chance)
-                if (action < 0.3) {
-                    const xOffset = Math.random() > 0.5 ? 20 : -20;
-                    const yOffset = Math.random() * 10 - 5;
-                    setPupilOffset({
-                        x: xOffset,
-                        y: yOffset
-                    });
-                    setTimeout(()=>setPupilOffset({
-                            x: 0,
+                // A. Complex Eye Movements (50% chance)
+                if (action < 0.5) {
+                    const subAction = Math.random();
+                    // 1. Double Scan (left then right)
+                    if (subAction < 0.25) {
+                        const firstDir = Math.random() > 0.5 ? 30 : -30;
+                        setPupilOffset({
+                            x: firstDir,
                             y: 0
-                        }), 800);
-                } else if (action < 0.7) {
+                        });
+                        setTimeout(()=>{
+                            setPupilOffset({
+                                x: -firstDir,
+                                y: 0
+                            });
+                            setTimeout(()=>setPupilOffset({
+                                    x: 0,
+                                    y: 0
+                                }), 500);
+                        }, 700);
+                    } else if (subAction < 0.45) {
+                        setPupilOffset({
+                            x: -35,
+                            y: 5
+                        });
+                        setTimeout(()=>{
+                            setPupilOffset({
+                                x: 35,
+                                y: -5
+                            });
+                            setTimeout(()=>setPupilOffset({
+                                    x: 0,
+                                    y: 0
+                                }), 800);
+                        }, 1000);
+                    } else if (subAction < 0.65) {
+                        const side = Math.random() > 0.5 ? 20 : -20;
+                        setPupilOffset({
+                            x: side,
+                            y: -30
+                        });
+                        setTimeout(()=>setPupilOffset({
+                                x: 0,
+                                y: 0
+                            }), 1200);
+                    } else if (subAction < 0.8) {
+                        setPupilOffset({
+                            x: 0,
+                            y: 20
+                        });
+                        setTimeout(()=>setPupilOffset({
+                                x: 0,
+                                y: 0
+                            }), 400);
+                    } else {
+                        const rx = (Math.random() - 0.5) * 40;
+                        const ry = (Math.random() - 0.5) * 20;
+                        setPupilOffset({
+                            x: rx,
+                            y: ry
+                        });
+                        setTimeout(()=>{
+                            setPupilOffset({
+                                x: -rx / 2,
+                                y: -ry / 2
+                            });
+                            setTimeout(()=>setPupilOffset({
+                                    x: 0,
+                                    y: 0
+                                }), 200);
+                        }, 200);
+                    }
+                } else if (action < 0.8) {
                     const variation = Math.random();
                     if (baseMood === "happy") {
-                        // Sometimes go back to normal even when running (as requested)
                         if (variation < 0.4) {
                             setCurrentMood("normal");
                             setTimeout(()=>setCurrentMood("happy"), 2000);
@@ -126,9 +185,9 @@ function CatEyes({ baseMood }) {
                             setTimeout(()=>setCurrentMood("happy"), 800);
                         }
                     } else if (baseMood === "normal") {
-                        if (variation < 0.3) {
+                        if (variation < 0.35) {
                             setCurrentMood("curious");
-                            setRotation(variation < 0.15 ? 12 : -12);
+                            setRotation(variation < 0.17 ? 15 : -15);
                             setTimeout(()=>{
                                 setCurrentMood("normal");
                                 setRotation(0);
@@ -161,13 +220,19 @@ function CatEyes({ baseMood }) {
     if (!isMounted) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
-            transform: `rotate(${rotation}deg)`,
-            transition: 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)'
+            transform: `rotate(${rotation}deg) translateY(${phase === "active" ? "-5px" : "0px"})`,
+            animation: phase === "active" ? 'float-container 4s ease-in-out infinite' : 'none'
         },
         className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
             [
-                "ced800dfeb8956b4",
+                "3ee7bb751e9d533d",
                 [
+                    rotation,
+                    rotation,
+                    pupilOffset.x,
+                    pupilOffset.y,
+                    pupilOffset.x,
+                    pupilOffset.y,
                     pupilOffset.x,
                     pupilOffset.y,
                     pupilOffset.x,
@@ -180,7 +245,7 @@ function CatEyes({ baseMood }) {
                     pupilOffset.y
                 ]
             ]
-        ]) + " " + "eyes-container relative",
+        ]) + " " + "eyes-container relative transition-all duration-700",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 style: {
@@ -188,8 +253,14 @@ function CatEyes({ baseMood }) {
                 },
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
                     [
-                        "ced800dfeb8956b4",
+                        "3ee7bb751e9d533d",
                         [
+                            rotation,
+                            rotation,
+                            pupilOffset.x,
+                            pupilOffset.y,
+                            pupilOffset.x,
+                            pupilOffset.y,
                             pupilOffset.x,
                             pupilOffset.y,
                             pupilOffset.x,
@@ -206,14 +277,20 @@ function CatEyes({ baseMood }) {
                 children: "Hi I'm Meow !!"
             }, void 0, false, {
                 fileName: "[project]/components/cateyes.tsx",
-                lineNumber: 161,
+                lineNumber: 202,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
                     [
-                        "ced800dfeb8956b4",
+                        "3ee7bb751e9d533d",
                         [
+                            rotation,
+                            rotation,
+                            pupilOffset.x,
+                            pupilOffset.y,
+                            pupilOffset.x,
+                            pupilOffset.y,
                             pupilOffset.x,
                             pupilOffset.y,
                             pupilOffset.x,
@@ -229,14 +306,20 @@ function CatEyes({ baseMood }) {
                 ]) + " " + `eye left ${currentMood} ${phase === "greeting" ? "hidden-eye" : ""}`
             }, void 0, false, {
                 fileName: "[project]/components/cateyes.tsx",
-                lineNumber: 168,
+                lineNumber: 209,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
                     [
-                        "ced800dfeb8956b4",
+                        "3ee7bb751e9d533d",
                         [
+                            rotation,
+                            rotation,
+                            pupilOffset.x,
+                            pupilOffset.y,
+                            pupilOffset.x,
+                            pupilOffset.y,
                             pupilOffset.x,
                             pupilOffset.y,
                             pupilOffset.x,
@@ -252,14 +335,20 @@ function CatEyes({ baseMood }) {
                 ]) + " " + `eye right ${currentMood} ${phase === "greeting" ? "hidden-eye" : ""}`
             }, void 0, false, {
                 fileName: "[project]/components/cateyes.tsx",
-                lineNumber: 169,
+                lineNumber: 210,
                 columnNumber: 7
             }, this),
             phase === "active" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].dynamic([
                     [
-                        "ced800dfeb8956b4",
+                        "3ee7bb751e9d533d",
                         [
+                            rotation,
+                            rotation,
+                            pupilOffset.x,
+                            pupilOffset.y,
+                            pupilOffset.x,
+                            pupilOffset.y,
                             pupilOffset.x,
                             pupilOffset.y,
                             pupilOffset.x,
@@ -276,12 +365,18 @@ function CatEyes({ baseMood }) {
                 children: "!"
             }, void 0, false, {
                 fileName: "[project]/components/cateyes.tsx",
-                lineNumber: 173,
+                lineNumber: 214,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "ced800dfeb8956b4",
+                id: "3ee7bb751e9d533d",
                 dynamic: [
+                    rotation,
+                    rotation,
+                    pupilOffset.x,
+                    pupilOffset.y,
+                    pupilOffset.x,
+                    pupilOffset.y,
                     pupilOffset.x,
                     pupilOffset.y,
                     pupilOffset.x,
@@ -293,12 +388,12 @@ function CatEyes({ baseMood }) {
                     pupilOffset.x,
                     pupilOffset.y
                 ],
-                children: `.eyes-container.__jsx-style-dynamic-selector{justify-content:center;align-items:center;gap:30px;min-height:100px;margin-bottom:20px;display:flex;position:relative}.greeting.__jsx-style-dynamic-selector{font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif;color:#fff;opacity:0;letter-spacing:-.04em;white-space:nowrap;pointer-events:none;font-size:36px;font-weight:300;transition:all .9s cubic-bezier(.22,1,.36,1);position:absolute;transform:translateY(10px)}.greeting.visible.__jsx-style-dynamic-selector{opacity:1;transform:translateY(0)}.exclamation.__jsx-style-dynamic-selector{color:#fff;opacity:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:60px;font-weight:900;transition:all .3s cubic-bezier(.175,.885,.32,1.275);position:absolute;top:-60px;left:calc(50% + 60px);transform:translate(-50%)rotate(10deg)}.exclamation.visible.__jsx-style-dynamic-selector{opacity:1;top:-90px;transform:translate(-50%)rotate(15deg)scale(1.2)}.eye.__jsx-style-dynamic-selector{opacity:1;width:90px;height:90px;transform:translate(${pupilOffset.x}px,${pupilOffset.y}px)scale(1);background:#fff;border-radius:18px;transition:all .6s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden}.hidden-eye.__jsx-style-dynamic-selector{opacity:0;pointer-events:none;transform:translateY(20px)scale(.5)}.eye.blink.__jsx-style-dynamic-selector{transform:translate(0)!important}.normal.__jsx-style-dynamic-selector{border-radius:18px;height:90px}.happy.__jsx-style-dynamic-selector{border-radius:50% 50% 12px 12px;height:50px;margin-top:20px;transform:scaleX(1.1)}.happy.__jsx-style-dynamic-selector:after{content:"";background:#000;border-radius:50% 50% 0 0;width:100%;height:40%;position:absolute;bottom:0;left:0}.squint.__jsx-style-dynamic-selector{border-radius:50% 50% 12px 12px;height:30px;margin-top:40px;transform:scaleX(1.15)}.squint.__jsx-style-dynamic-selector:after{content:"";background:#000;border-radius:50% 50% 0 0;width:100%;height:50%;position:absolute;bottom:0;left:0}.angry.__jsx-style-dynamic-selector{border-radius:12px;height:80px}.angry.left.__jsx-style-dynamic-selector{transform:rotate(-15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.angry.right.__jsx-style-dynamic-selector{transform:rotate(15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.angry.__jsx-style-dynamic-selector:before{content:"";background:#000;height:50px;position:absolute;top:-20px;left:-20px;right:-20px;transform:rotate(10deg)}.angry.right.__jsx-style-dynamic-selector:before{transform:rotate(-10deg)}.narrow.__jsx-style-dynamic-selector{border-radius:8px;height:50px}.narrow.left.__jsx-style-dynamic-selector{transform:rotate(-15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.narrow.right.__jsx-style-dynamic-selector{transform:rotate(15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.narrow.__jsx-style-dynamic-selector:before{content:"";background:#000;height:50px;position:absolute;top:-20px;left:-20px;right:-20px;transform:rotate(10deg)}.narrow.right.__jsx-style-dynamic-selector:before{transform:rotate(-10deg)}.sad.__jsx-style-dynamic-selector{border-radius:40% 40% 20% 20%;height:70px;margin-top:10px}.sad.__jsx-style-dynamic-selector:after{content:"";background:#0000001a;width:100%;height:30%;position:absolute;top:0;left:0}.annoyed.__jsx-style-dynamic-selector{border-radius:4px 4px 18px 18px;height:45px;margin-top:22px}.curious.__jsx-style-dynamic-selector{border-radius:35%;width:95px;height:95px}.sleeping.__jsx-style-dynamic-selector{opacity:.6;border-radius:2px;margin-top:60px;width:80px!important;height:4px!important}.surprised.__jsx-style-dynamic-selector{border-radius:50%;width:100px;height:100px;transform:scale(1.1)}.blink.__jsx-style-dynamic-selector{border-radius:2px;margin-top:43px;width:90px!important;height:4px!important}.blink.__jsx-style-dynamic-selector:before,.blink.__jsx-style-dynamic-selector:after{display:none}`
+                children: `@keyframes float-container{0%,to{transform:rotate(${rotation}deg)translateY(-5px)}50%{transform:rotate(${rotation}deg)translateY(5px)}}.eyes-container.__jsx-style-dynamic-selector{justify-content:center;align-items:center;gap:30px;min-height:100px;margin-bottom:20px;display:flex;position:relative}.greeting.__jsx-style-dynamic-selector{font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif;color:#fff;opacity:0;letter-spacing:-.04em;white-space:nowrap;pointer-events:none;font-size:36px;font-weight:300;transition:all .9s cubic-bezier(.22,1,.36,1);position:absolute;transform:translateY(10px)}.greeting.visible.__jsx-style-dynamic-selector{opacity:1;transform:translateY(0)}.exclamation.__jsx-style-dynamic-selector{color:#fff;opacity:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:60px;font-weight:900;transition:all .3s cubic-bezier(.175,.885,.32,1.275);position:absolute;top:-60px;left:calc(50% + 60px);transform:translate(-50%)rotate(10deg)}.exclamation.visible.__jsx-style-dynamic-selector{opacity:1;top:-90px;transform:translate(-50%)rotate(15deg)scale(1.2)}@keyframes float{0%,to{transform:translate(${pupilOffset.x}px,${pupilOffset.y}px)}50%{transform:translate(${pupilOffset.x}px,${pupilOffset.y}px)translateY(-3px)}}.eye.__jsx-style-dynamic-selector{opacity:1;width:90px;height:90px;transform:translate(${pupilOffset.x}px,${pupilOffset.y}px);background:#fff;border-radius:18px;transition:all .6s cubic-bezier(.34,1.56,.64,1);animation:4s ease-in-out infinite float;position:relative;overflow:hidden}.hidden-eye.__jsx-style-dynamic-selector{opacity:0;pointer-events:none;transform:translateY(20px)scale(.5)}.eye.blink.__jsx-style-dynamic-selector{transform:translate(0)!important}.normal.__jsx-style-dynamic-selector{border-radius:18px;height:90px}.happy.__jsx-style-dynamic-selector{border-radius:50% 50% 12px 12px;height:50px;margin-top:20px;transform:scaleX(1.1)}.happy.__jsx-style-dynamic-selector:after{content:"";background:#000;border-radius:50% 50% 0 0;width:100%;height:40%;position:absolute;bottom:0;left:0}.squint.__jsx-style-dynamic-selector{border-radius:50% 50% 12px 12px;height:30px;margin-top:40px;transform:scaleX(1.15)}.squint.__jsx-style-dynamic-selector:after{content:"";background:#000;border-radius:50% 50% 0 0;width:100%;height:50%;position:absolute;bottom:0;left:0}.angry.__jsx-style-dynamic-selector{border-radius:12px;height:80px}.angry.left.__jsx-style-dynamic-selector{transform:rotate(-15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.angry.right.__jsx-style-dynamic-selector{transform:rotate(15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.angry.__jsx-style-dynamic-selector:before{content:"";background:#000;height:50px;position:absolute;top:-20px;left:-20px;right:-20px;transform:rotate(10deg)}.angry.right.__jsx-style-dynamic-selector:before{transform:rotate(-10deg)}.narrow.__jsx-style-dynamic-selector{border-radius:8px;height:50px}.narrow.left.__jsx-style-dynamic-selector{transform:rotate(-15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.narrow.right.__jsx-style-dynamic-selector{transform:rotate(15deg)translate(${pupilOffset.x}px,${pupilOffset.y}px)}.narrow.__jsx-style-dynamic-selector:before{content:"";background:#000;height:50px;position:absolute;top:-20px;left:-20px;right:-20px;transform:rotate(10deg)}.narrow.right.__jsx-style-dynamic-selector:before{transform:rotate(-10deg)}.sad.__jsx-style-dynamic-selector{border-radius:40% 40% 20% 20%;height:70px;margin-top:10px}.sad.__jsx-style-dynamic-selector:after{content:"";background:#0000001a;width:100%;height:30%;position:absolute;top:0;left:0}.annoyed.__jsx-style-dynamic-selector{border-radius:4px 4px 18px 18px;height:45px;margin-top:22px}.curious.__jsx-style-dynamic-selector{border-radius:35%;width:95px;height:95px}.sleeping.__jsx-style-dynamic-selector{opacity:.6;border-radius:2px;margin-top:60px;width:80px!important;height:4px!important}.surprised.__jsx-style-dynamic-selector{border-radius:50%;width:100px;height:100px;transform:scale(1.1)}.blink.__jsx-style-dynamic-selector{border-radius:2px;margin-top:43px;width:90px!important;height:4px!important}.blink.__jsx-style-dynamic-selector:before,.blink.__jsx-style-dynamic-selector:after{display:none}`
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/cateyes.tsx",
-        lineNumber: 159,
+        lineNumber: 194,
         columnNumber: 5
     }, this);
 }

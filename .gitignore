@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# next
+.next/
+
+# electron build
+dist/
+out/
+
+# binaries
+*.exe
+
+# env
+.env*
+
+# logs
+*.log
