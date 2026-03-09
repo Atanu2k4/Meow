@@ -9,7 +9,7 @@
     "app": "cd meow_app && npm run dev",
     "start-local": "node start-meow.js",
     "tracker": "cd tracker && node tracker.js",
-    "electron": "wait-on http://localhost:3001 && electron ."
+    "electron": "electron ."
   },
   "dependencies": {
     "active-win": "^8.2.1",

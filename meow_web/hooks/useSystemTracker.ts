@@ -28,7 +28,7 @@ export function useSystemTracker() {
 
         const connect = () => {
             console.log("🔄 Attempting to connect to Meow Tracker...");
-            socket = new WebSocket('ws://127.0.0.1:5263');
+            socket = new WebSocket('ws://localhost:5263');
 
             socket.onopen = () => {
                 setStatus('connected');
@@ -82,5 +82,11 @@ export function useSystemTracker() {
         }
     }, [ws]);
 
-    return { status, currentApp, stats, logTabActivity };
+    const clearData = useCallback(() => {
+        if (ws && ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({ type: 'CLEAR_DATA' }));
+        }
+    }, [ws]);
+
+    return { status, currentApp, stats, logTabActivity, clearData };
 }

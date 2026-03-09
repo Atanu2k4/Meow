@@ -73,8 +73,10 @@ function logTab(domain, title, duration, id) {
     saveDB(db);
 }
 
-function getStats() {
-    return db;
+function clearDB() {
+    db = { sessions: [], tabs: [], totals: {} };
+    saveDB(db);
+    console.log("🧹 Database cleared.");
 }
 
-module.exports = { logSession, logTab, getStats };
+module.exports = { logSession, logTab, getStats, clearDB };

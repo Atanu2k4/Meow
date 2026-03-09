@@ -2,16 +2,22 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Activity, Clock, History } from "lucide-react";
+import { Activity, Clock, History, Trash2 } from "lucide-react";
 
 import { useSystemTracker } from "@/hooks/useSystemTracker";
 
 export default function ActivityTracker() {
-    const { currentApp, stats } = useSystemTracker();
+    const { currentApp, stats, clearData } = useSystemTracker();
     const [totalFocusToday, setTotalFocusToday] = useState(0);
 
     // Calculate total app focus from stats
     const totalAppTime = Object.values(stats.totals).reduce((acc, curr) => acc + curr.totalDuration, 0);
+
+    const handleClear = () => {
+        if (confirm("Are you sure you want to clear all local activity history? This cannot be undone.")) {
+            clearData();
+        }
+    };
 
     useEffect(() => {
         const loadStats = () => {
@@ -29,7 +35,6 @@ export default function ActivityTracker() {
         };
 
         loadStats();
-        // ... listeners
     }, []);
 
     const formatTime = (seconds: number) => {
@@ -45,11 +50,20 @@ export default function ActivityTracker() {
             animate={{ opacity: 1, x: 0 }}
             className="fixed bottom-24 left-8 w-64 bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-4 z-50 group transition-all shadow-2xl shadow-black/10 hover:border-foreground/30"
         >
-            <div className="flex items-center gap-2">
-                <div className="p-2 rounded-xl bg-foreground/5">
-                    <Activity size={14} className="opacity-50" />
+            <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                    <div className="p-2 rounded-xl bg-foreground/5">
+                        <Activity size={14} className="opacity-50" />
+                    </div>
+                    <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">System Activity</h2>
                 </div>
-                <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">System Activity</h2>
+                <button
+                    onClick={handleClear}
+                    className="p-1 px-2 rounded-lg bg-red-500/10 hover:bg-red-500/20 text-red-500/50 hover:text-red-500 transition-all opacity-0 group-hover:opacity-100"
+                    title="Clear All History"
+                >
+                    <Trash2 size={12} />
+                </button>
             </div>
 
             {/* Current App Info */}
