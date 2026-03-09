@@ -1,10 +1,13 @@
 {
-  "name": "tracker",
+  "name": "meow-tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Local background tracker for the Meow productivity app",
+  "main": "tracker.js",
+  "bin": {
+    "meow-tracker": "./tracker.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node tracker.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +15,8 @@
   "type": "commonjs",
   "dependencies": {
     "active-win": "^8.2.1",
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
     "ws": "^8.19.0"
   }
 }

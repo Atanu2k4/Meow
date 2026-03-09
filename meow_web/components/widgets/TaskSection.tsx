@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Trash2, CheckCircle2, Circle, Target } from "lucide-react";
+import { Plus, Trash2, CheckCircle2, Circle, Target, Maximize2 } from "lucide-react";
+import { TaskSettingsModal } from "./TaskSettingsModal";
 
 export interface Task {
     id: string;
@@ -19,6 +20,7 @@ interface TaskSectionProps {
 export default function TaskSection({ activeTaskId, onSetActiveTask }: TaskSectionProps) {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [newTaskTitle, setNewTaskTitle] = useState("");
+    const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
     // Load tasks from localStorage
     useEffect(() => {
@@ -88,105 +90,122 @@ export default function TaskSection({ activeTaskId, onSetActiveTask }: TaskSecti
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="fixed top-24 right-8 w-72 h-fit max-h-[60vh] bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-6 z-50 group/box hover:border-foreground/30 transition-all shadow-2xl shadow-black/10"
-        >
-            <div className="flex flex-col gap-0.5">
-                <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">Objective</h2>
-            </div>
+        <>
+            <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="fixed top-24 right-8 w-72 h-fit max-h-[60vh] bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-6 z-50 group/box hover:border-foreground/30 transition-all shadow-2xl shadow-black/10"
+            >
+                <div className="flex justify-between items-center pr-2">
+                    <div className="flex flex-col gap-0.5">
+                        <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">Objective</h2>
+                    </div>
+                    <button
+                        onClick={() => setIsSettingsOpen(true)}
+                        className="p-1.5 hover:bg-foreground/5 rounded-lg opacity-40 hover:opacity-100 transition-all"
+                    >
+                        <Maximize2 size={12} />
+                    </button>
+                </div>
 
-            <form onSubmit={addTask} className="relative">
-                <input
-                    type="text"
-                    value={newTaskTitle}
-                    onChange={(e) => setNewTaskTitle(e.target.value)}
-                    placeholder="Focus on..."
-                    className="w-full bg-transparent border-b border-foreground/[0.1] py-2 px-0 text-xs focus:outline-none focus:border-foreground/40 transition-all placeholder:opacity-30 placeholder:italic"
-                />
-                <button
-                    type="submit"
-                    className="absolute right-0 top-1/2 -translate-y-1/2 p-1 hover:opacity-100 opacity-40 transition-opacity"
-                >
-                    <Plus size={14} />
-                </button>
-            </form>
+                <form onSubmit={addTask} className="relative">
+                    <input
+                        type="text"
+                        value={newTaskTitle}
+                        onChange={(e) => setNewTaskTitle(e.target.value)}
+                        placeholder="Focus on..."
+                        className="w-full bg-transparent border-b border-foreground/[0.1] py-2 px-0 text-xs focus:outline-none focus:border-foreground/40 transition-all placeholder:opacity-30 placeholder:italic"
+                    />
+                    <button
+                        type="submit"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 p-1 hover:opacity-100 opacity-40 transition-opacity"
+                    >
+                        <Plus size={14} />
+                    </button>
+                </form>
 
-            <div className="flex flex-col gap-1 overflow-y-auto pr-1 custom-scrollbar">
-                <AnimatePresence initial={false}>
-                    {tasks.length === 0 ? (
-                        <div className="py-4 flex flex-col items-center justify-center gap-2 opacity-10">
-                            <Target size={20} strokeWidth={1.5} />
-                            <span className="text-[8px] uppercase tracking-widest font-black">Mindful Focus</span>
-                        </div>
-                    ) : (
-                        tasks.map((task) => (
-                            <motion.div
-                                key={task.id}
-                                layout
-                                initial={{ opacity: 0, y: 5 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                className={`group flex items-center gap-3 p-2.5 rounded-2xl transition-all ${activeTaskId === task.id
-                                    ? "bg-foreground/[0.08] shadow-sm"
-                                    : "hover:bg-foreground/[0.04]"
-                                    }`}
-                            >
-                                <button
-                                    onClick={() => toggleComplete(task.id)}
-                                    className="flex-shrink-0 transition-all"
+                <div className="flex flex-col gap-1 overflow-y-auto pr-1 custom-scrollbar" data-lenis-prevent>
+                    <AnimatePresence initial={false}>
+                        {tasks.length === 0 ? (
+                            <div className="py-4 flex flex-col items-center justify-center gap-2 opacity-10">
+                                <Target size={20} strokeWidth={1.5} />
+                                <span className="text-[8px] uppercase tracking-widest font-black">Mindful Focus</span>
+                            </div>
+                        ) : (
+                            tasks.map((task) => (
+                                <motion.div
+                                    key={task.id}
+                                    layout
+                                    initial={{ opacity: 0, y: 5 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    className={`group flex items-center gap-3 p-2.5 rounded-2xl transition-all ${activeTaskId === task.id
+                                        ? "bg-foreground/[0.08] shadow-sm"
+                                        : "hover:bg-foreground/[0.04]"
+                                        }`}
                                 >
-                                    {task.completed ? (
-                                        <CheckCircle2 size={14} className="opacity-50" />
-                                    ) : (
-                                        <Circle size={14} className="opacity-20 group-hover:opacity-50" />
-                                    )}
-                                </button>
-
-                                <div
-                                    className="flex-1 min-w-0 cursor-pointer"
-                                    onClick={() => onSetActiveTask(task.id === activeTaskId ? null : task.id)}
-                                >
-                                    <p className={`text-[11px] truncate font-semibold transition-all ${task.completed ? "line-through opacity-20" : "opacity-80 group-hover:opacity-100"}`}>
-                                        {task.title}
-                                    </p>
-                                    <div className="flex items-center gap-2 mt-0.5">
-                                        <span className="text-[7px] uppercase tracking-wider opacity-40 font-bold">
-                                            {formatFocusTime(task.focusTime)}
-                                        </span>
-                                        {activeTaskId === task.id && !task.completed && (
-                                            <span className="flex items-center gap-0.5 text-[7px] uppercase font-black text-foreground/60 animate-pulse">
-                                                Active
-                                            </span>
+                                    <button
+                                        onClick={() => toggleComplete(task.id)}
+                                        className="flex-shrink-0 transition-all"
+                                    >
+                                        {task.completed ? (
+                                            <CheckCircle2 size={14} className="opacity-50" />
+                                        ) : (
+                                            <Circle size={14} className="opacity-20 group-hover:opacity-50" />
                                         )}
+                                    </button>
+
+                                    <div
+                                        className="flex-1 min-w-0 cursor-pointer"
+                                        onClick={() => onSetActiveTask(task.id === activeTaskId ? null : task.id)}
+                                    >
+                                        <p className={`text-[11px] truncate font-semibold transition-all ${task.completed ? "line-through opacity-20" : "opacity-80 group-hover:opacity-100"}`}>
+                                            {task.title}
+                                        </p>
+                                        <div className="flex items-center gap-2 mt-0.5">
+                                            <span className="text-[7px] uppercase tracking-wider opacity-40 font-bold">
+                                                {formatFocusTime(task.focusTime)}
+                                            </span>
+                                            {activeTaskId === task.id && !task.completed && (
+                                                <span className="flex items-center gap-0.5 text-[7px] uppercase font-black text-foreground/60 animate-pulse">
+                                                    Active
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
-                                </div>
 
-                                <button
-                                    onClick={() => deleteTask(task.id)}
-                                    className="opacity-0 group-hover:opacity-20 hover:!opacity-60 transition-opacity p-1"
-                                >
-                                    <Trash2 size={10} />
-                                </button>
-                            </motion.div>
-                        )
-                        ))}
-                </AnimatePresence>
-            </div>
+                                    <button
+                                        onClick={() => deleteTask(task.id)}
+                                        className="opacity-0 group-hover:opacity-20 hover:!opacity-60 transition-opacity p-1"
+                                    >
+                                        <Trash2 size={10} />
+                                    </button>
+                                </motion.div>
+                            )
+                            ))}
+                    </AnimatePresence>
+                </div>
 
-            <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 2px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: rgba(var(--foreground-rgb), 0.05);
-          border-radius: 10px;
-        }
-      `}</style>
-        </motion.div>
+                <style jsx>{`
+            .custom-scrollbar::-webkit-scrollbar {
+              width: 2px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+              background: transparent;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+              background: rgba(var(--foreground-rgb), 0.05);
+              border-radius: 10px;
+            }
+          `}</style>
+            </motion.div>
+
+            <TaskSettingsModal
+                isOpen={isSettingsOpen}
+                onClose={() => setIsSettingsOpen(false)}
+                tasks={tasks}
+                onUpdateTasks={setTasks}
+            />
+        </>
     );
 }

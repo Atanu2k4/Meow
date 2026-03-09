@@ -101,7 +101,7 @@ export default function Home() {
   const Component = widgets.rain ? BackgroundBeamsWithCollision : "div";
 
   return (
-    <Component className={widgets.rain ? "min-h-screen" : "relative min-h-screen flex items-center justify-center bg-background text-foreground overflow-hidden transition-colors duration-500"}>
+    <Component className={widgets.rain ? "min-h-screen" : "relative min-h-screen flex items-center justify-center bg-background text-foreground overflow-x-hidden transition-colors duration-500"}>
 
       <SettingsButton />
 

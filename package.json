@@ -4,9 +4,12 @@
   "description": "Electron wrapper for Meow",
   "main": "electron/main.js",
   "scripts": {
-    "dev": "concurrently \"npm run next\" \"npm run electron\"",
-    "next": "cd meow && npm run dev",
-    "electron": "wait-on http://localhost:3000 && electron ."
+    "dev": "concurrently \"npm run web\" \"npm run tracker\"",
+    "web": "cd meow_web && npm run dev",
+    "app": "cd meow_app && npm run dev",
+    "start-local": "node start-meow.js",
+    "tracker": "cd tracker && node tracker.js",
+    "electron": "wait-on http://localhost:3001 && electron ."
   },
   "dependencies": {
     "active-win": "^8.2.1",

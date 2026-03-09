@@ -96,7 +96,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                             </button>
                         </div>
 
-                        <div className="flex-1 overflow-y-auto p-8 pt-4 space-y-10 no-scrollbar">
+                        <div className="flex-1 overflow-y-auto p-8 pt-4 space-y-10 no-scrollbar" data-lenis-prevent>
                             {/* Profile Section */}
                             <section>
                                 <h3 className="text-[10px] uppercase tracking-[0.25em] font-extrabold opacity-40 mb-6 px-1">Profile</h3>

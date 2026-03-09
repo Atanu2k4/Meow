@@ -4,16 +4,22 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Activity, Clock, History } from "lucide-react";
 
+import { useSystemTracker } from "@/hooks/useSystemTracker";
+
 export default function ActivityTracker() {
+    const { currentApp, stats } = useSystemTracker();
     const [totalFocusToday, setTotalFocusToday] = useState(0);
+
+    // Calculate total app focus from stats
+    const totalAppTime = Object.values(stats.totals).reduce((acc, curr) => acc + curr.totalDuration, 0);
 
     useEffect(() => {
         const loadStats = () => {
+            // Keep legacy task time for now
             const tasksString = localStorage.getItem("meow-tasks");
             if (tasksString) {
                 try {
                     const tasks = JSON.parse(tasksString);
-                    // This is a simplification; a real app might track by date
                     const total = tasks.reduce((acc: number, task: any) => acc + (task.focusTime || 0), 0);
                     setTotalFocusToday(total);
                 } catch (e) {
@@ -23,12 +29,7 @@ export default function ActivityTracker() {
         };
 
         loadStats();
-        window.addEventListener("meow-tasks-updated", loadStats);
-        window.addEventListener("meow-focus-update", loadStats);
-        return () => {
-            window.removeEventListener("meow-tasks-updated", loadStats);
-            window.removeEventListener("meow-focus-update", loadStats);
-        };
+        // ... listeners
     }, []);
 
     const formatTime = (seconds: number) => {
@@ -48,30 +49,40 @@ export default function ActivityTracker() {
                 <div className="p-2 rounded-xl bg-foreground/5">
                     <Activity size={14} className="opacity-50" />
                 </div>
-                <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">Activity</h2>
+                <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">System Activity</h2>
             </div>
 
+            {/* Current App Info */}
+            {currentApp && (
+                <div className="p-3 rounded-2xl bg-foreground/5 border border-foreground/10">
+                    <div className="text-[9px] uppercase tracking-widest font-bold opacity-30 mb-1">Focusing on</div>
+                    <div className="text-xs font-bold truncate">{currentApp.app}</div>
+                    <div className="text-[10px] opacity-40 truncate">{currentApp.title}</div>
+                </div>
+            )}
+
             <div className="flex flex-col gap-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider opacity-30">Today's Focus</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider opacity-30">Total Screen Time</span>
                 <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-black tabular-nums">{formatTime(totalFocusToday)}</span>
+                    <span className="text-2xl font-black tabular-nums">{formatTime(totalAppTime)}</span>
                 </div>
             </div>
 
             <div className="h-[1px] w-full bg-foreground/5" />
 
-            <div className="flex flex-col gap-3">
-                <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold uppercase tracking-wider opacity-30">Intensity</span>
-                    <span className="text-[10px] font-black text-foreground/60">High</span>
-                </div>
-                <div className="w-full h-1 bg-foreground/5 rounded-full overflow-hidden">
-                    <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: "65%" }}
-                        className="h-full bg-foreground/40 rounded-full"
-                    />
-                </div>
+            {/* Show top 3 apps */}
+            <div className="flex flex-col gap-2">
+                {Object.entries(stats.totals)
+                    .filter(([key]) => !key.includes('.')) // Hide domains here
+                    .sort((a, b) => b[1].totalDuration - a[1].totalDuration)
+                    .slice(0, 3)
+                    .map(([app, data]) => (
+                        <div key={app} className="flex justify-between items-center text-[10px]">
+                            <span className="opacity-50 truncate max-w-[100px]">{app}</span>
+                            <span className="font-bold">{formatTime(data.totalDuration)}</span>
+                        </div>
+                    ))
+                }
             </div>
         </motion.div>
     );

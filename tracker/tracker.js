@@ -1,30 +1,81 @@
+#!/usr/bin/env node
+
 const activeWin = require("active-win");
 const WebSocket = require("ws");
+const express = require("express");
+const cors = require("cors");
+const { logSession, logTab, getStats } = require("./database");
 
-const PORT = 3001;
-const wss = new WebSocket.Server({ port: PORT, host: '0.0.0.0' });
+const PORT = 5263;
+const app = express();
+app.use(cors()); // Allow your Vercel site to talk to your local machine
 
-console.log(`🟢 Tracker running on ws://localhost:${PORT}`);
+// REST endpoint for initial data sync
+app.get("/stats", (req, res) => {
+    res.json(getStats());
+});
+
+const server = app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🟢 Meow Backend running on http://localhost:${PORT}`);
+});
+
+const wss = new WebSocket.Server({ server });
+
+let lastApp = null;
+let lastTitle = null;
+let startTime = Date.now();
 
 wss.on("connection", (ws) => {
     console.log("🔗 Frontend connected");
 
+    // Send initial stats
+    ws.send(JSON.stringify({ type: 'init', data: getStats() }));
+
     const interval = setInterval(async () => {
         try {
             const win = await activeWin();
-
             if (!win) return;
 
+            const currentApp = win.owner.name;
+            const currentTitle = win.title;
+
+            // If app changed, log the previous session
+            if (lastApp && (currentApp !== lastApp || currentTitle !== lastTitle)) {
+                const duration = Math.floor((Date.now() - startTime) / 1000);
+                if (duration > 1) { // Only log if > 1s
+                    logSession(lastApp, lastTitle, duration);
+                }
+                startTime = Date.now();
+            }
+
+            lastApp = currentApp;
+            lastTitle = currentTitle;
+
+            // Send real-time update
             ws.send(
                 JSON.stringify({
-                    app: win.owner.name,
-                    title: win.title,
+                    type: 'update',
+                    app: currentApp,
+                    title: currentTitle,
                 })
             );
         } catch (err) {
             console.error("Error:", err);
         }
     }, 2000);
+
+    ws.on("message", (message) => {
+        try {
+            const data = JSON.parse(message);
+            if (data.type === 'TAB_LOG') {
+                logTab(data.domain, data.title, data.duration, data.id);
+                // Broadcast updated stats
+                ws.send(JSON.stringify({ type: 'stats', data: getStats() }));
+            }
+        } catch (e) {
+            console.error("Msg error:", e);
+        }
+    });
 
     ws.on("close", () => {
         console.log("❌ Frontend disconnected");

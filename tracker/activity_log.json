@@ -1,0 +1,4523 @@
+{
+  "sessions": [
+    {
+      "timestamp": "2026-03-09T20:06:25.635Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - tracker.js",
+      "duration": 19,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:06:33.680Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 8,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:06:41.731Z",
+      "app": "Brave Browser",
+      "title": "Projects - Canva - Brave",
+      "duration": 8,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:01.815Z",
+      "app": "Brave Browser",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab - Brave",
+      "duration": 20,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:17.844Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 16,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:31.909Z",
+      "app": "Brave Browser",
+      "title": "Copy of I AM IT website issues and solutions - Presentation - Brave",
+      "duration": 14,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:46.129Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 14,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:48.130Z",
+      "app": "SnippingTool.exe",
+      "title": "Snipping Tool Overlay",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:50.143Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:07:52.149Z",
+      "app": "Windows Shell Experience Host",
+      "title": "New notification",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:08:52.466Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - tracker.js",
+      "duration": 60,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:00.490Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 8,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:04.499Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - tracker.js",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:24.300Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:24.567Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - database.js",
+      "duration": 20,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.118Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.119Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.120Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.136Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.151Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.165Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.180Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.196Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:44.211Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.939Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.941Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.942Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.955Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.966Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.977Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:54.989Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:55.000Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:09:55.012Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.938Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.940Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.941Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.955Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.968Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.980Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:04.994Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:05.006Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:05.019Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.954Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.955Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.956Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.957Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.958Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.959Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.960Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.961Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:14.962Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:24.937Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:24.944Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:24.961Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:24.978Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:24.979Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:24.993Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:25.007Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:25.021Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:25.036Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.946Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.947Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.949Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.964Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.975Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.987Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:34.999Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:35.011Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:35.022Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:44.953Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:44.955Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:44.956Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:44.971Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:44.984Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:44.997Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:45.011Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:45.025Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:45.039Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:52.978Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - activity_log.json",
+      "duration": 88,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.090Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.091Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.093Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.095Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.096Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.097Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.119Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.138Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:10:54.159Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.496Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.497Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.499Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.517Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.537Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.555Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.575Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.577Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:08.596Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:16.994Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 24,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.950Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.951Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.953Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.954Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.956Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.975Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:20.991Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:21.008Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:21.021Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:27.076Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - activity_log.json",
+      "duration": 10,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:30.950Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:30.952Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:30.953Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:30.967Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:30.982Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:30.995Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:31.008Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:31.021Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:31.032Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:40.955Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:40.956Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:40.958Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:40.959Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:40.975Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:40.989Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:41.009Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:41.024Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:41.037Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.948Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.949Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.963Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.964Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.966Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.968Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.981Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:50.993Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:11:51.005Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:00.962Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:00.964Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:00.966Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:00.981Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:00.994Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:01.007Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:01.025Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:01.041Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:01.042Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.958Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.960Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.961Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.963Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.965Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.984Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:10.998Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:11.015Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:12:11.033Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:00.959Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:00.960Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:00.961Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:00.977Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:00.992Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:01.005Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:01.021Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:01.037Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:01.054Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:57.858Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - voice.md",
+      "duration": 150,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:57.932Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:57.934Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:57.941Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:57.962Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:57.982Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:58.005Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:58.026Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:58.046Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:58.069Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:13:59.865Z",
+      "app": "Windows Explorer",
+      "title": "",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.683Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.685Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.702Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.722Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.742Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.766Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.788Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.810Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:00.831Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:13.961Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:13.964Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:13.965Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:13.968Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:14.006Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:14.009Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:14.037Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:14.039Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:14:14.041Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.802Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.804Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.806Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.825Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.843Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.862Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.879Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.901Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:17.919Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:24.150Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 84,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.800Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.802Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.823Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.843Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.865Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.867Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.868Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.870Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:27.897Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:34.197Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - voice.md",
+      "duration": 10,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.162Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.164Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.185Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.203Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.222Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.242Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.262Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.295Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:47.323Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:53.527Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 19,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:57.554Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - voice.md",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:57.952Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:57.954Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:57.977Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:57.981Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:58.001Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:58.018Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:58.033Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:58.051Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:15:58.068Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:07.949Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:07.951Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:07.968Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:07.982Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:07.996Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:08.012Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:08.026Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:08.039Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:08.052Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:17.943Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:17.945Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:17.961Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:17.963Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:17.977Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:17.991Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:18.002Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:18.016Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:18.029Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:27.942Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:27.945Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:27.966Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:27.969Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:27.992Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:28.012Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:28.031Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:28.049Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:28.068Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:37.949Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:37.952Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:37.954Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:37.969Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:37.981Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:37.994Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:38.009Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:38.025Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:38.041Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:47.945Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:47.947Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:47.962Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:47.975Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:47.986Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:47.999Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:48.015Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:48.029Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:16:48.045Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:00.966Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:00.969Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:00.987Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:01.001Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:01.015Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:01.029Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:01.044Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:01.057Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:01.071Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:08.982Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:08.984Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.012Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.034Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.060Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.082Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.104Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.123Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.145Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:09.865Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - ARCHITECTURE.md",
+      "duration": 72,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:22.738Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 12,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:22.953Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:22.955Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:22.969Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:22.984Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:22.999Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:23.002Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:23.019Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:23.035Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:23.050Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:26.753Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - ARCHITECTURE.md",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:32.954Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:32.956Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:32.973Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:32.991Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:33.008Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:33.026Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:33.041Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:33.057Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:33.071Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:42.949Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:42.951Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:42.967Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:42.980Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:42.994Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:43.006Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:43.020Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:43.033Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:43.047Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:52.941Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:52.943Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:52.958Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:52.971Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:52.985Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:52.998Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:53.013Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:53.027Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:17:53.043Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:02.944Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:02.947Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:02.950Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:02.967Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:02.981Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:02.998Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:03.012Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:03.026Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:03.044Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:12.958Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:12.961Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:12.978Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:12.991Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:13.003Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:13.017Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:13.036Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:13.051Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:18:13.064Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:00.955Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:00.958Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:00.973Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:00.985Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:00.999Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:01.013Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:01.025Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:01.038Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:01.054Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:27.983Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:27.985Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.000Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.014Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.030Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.044Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.058Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.072Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:28.086Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.099Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.102Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.124Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.145Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.148Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.151Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.153Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.156Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:39.158Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:48.931Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:48.934Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:48.949Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:48.963Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:48.976Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:48.991Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:49.005Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:49.019Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:49.033Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:58.945Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:58.948Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:58.963Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:58.979Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:58.992Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:59.006Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:59.019Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:59.031Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:19:59.045Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:08.935Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:08.938Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:08.956Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:08.969Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:08.982Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:08.994Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:09.008Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:09.022Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:09.034Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.938Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.941Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.943Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.961Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.973Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.986Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:18.999Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:19.010Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:19.022Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:28.933Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:28.938Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:28.958Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:28.974Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:28.989Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:29.005Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:29.021Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:29.037Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:29.051Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:20:35.666Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - SETUP.md",
+      "duration": 188,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:00.970Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:00.974Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:00.993Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:01.008Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:01.023Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:01.035Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:01.049Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:01.063Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:21:01.077Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:00.949Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:00.952Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:00.969Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:00.984Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:00.998Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:01.011Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:01.024Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:01.039Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:22:01.055Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:00.971Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:00.974Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:00.990Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:01.004Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:01.018Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:01.032Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:01.047Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:01.060Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:01.078Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:23:46.588Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - start-meow.js",
+      "duration": 190,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:00.956Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:00.958Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:00.975Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:00.986Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:01.000Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:01.014Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:01.029Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:01.043Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:24:01.058Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:00.948Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:00.952Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:00.967Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:00.980Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:00.994Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:01.006Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:01.018Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:01.030Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:01.043Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.229Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.235Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.256Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.281Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.305Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.333Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.357Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.379Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:28.402Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:29.051Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - SETUP.md",
+      "duration": 102,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:35.079Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 6,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:38.948Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:38.951Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:38.971Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:38.991Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:39.009Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:39.029Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:39.048Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:39.051Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:39.054Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:48.942Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:48.945Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:48.962Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:48.974Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:48.987Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:49.000Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:49.016Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:49.029Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:49.043Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:58.946Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:58.949Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:58.964Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:58.978Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:58.991Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:59.004Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:59.016Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:59.029Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:25:59.041Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:08.940Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:08.943Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:08.959Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:08.972Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:08.985Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:08.999Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:09.018Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:09.032Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:09.048Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:18.940Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:18.943Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:18.957Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:18.970Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:18.983Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:18.997Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:19.013Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:19.027Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:19.039Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:28.945Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:28.949Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:28.973Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:28.994Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:29.015Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:29.036Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:29.059Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:29.082Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:29.106Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:29.343Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - SETUP.md",
+      "duration": 54,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:33.357Z",
+      "app": "Windows Explorer",
+      "title": "Home and 1 more tab - File Explorer",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:45.433Z",
+      "app": "Windows Explorer",
+      "title": "Windows-SSD (C:) and 1 more tab - File Explorer",
+      "duration": 12,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:26:47.436Z",
+      "app": "Windows Explorer",
+      "title": "Users and 1 more tab - File Explorer",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:00.962Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:00.967Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:00.983Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:01.001Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:01.024Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:01.046Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:01.067Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:01.089Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:01.110Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:03.539Z",
+      "app": "Windows Explorer",
+      "title": "user and 1 more tab - File Explorer",
+      "duration": 16,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:07.560Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - SETUP.md",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:31.668Z",
+      "app": "Windows Explorer",
+      "title": "user and 1 more tab - File Explorer",
+      "duration": 24,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:33.681Z",
+      "app": "Windows Explorer",
+      "title": ".m - Search Results in user and 1 more tab - File Explorer",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:27:37.700Z",
+      "app": "Windows Explorer",
+      "title": ".meow - Search Results in user and 1 more tab - File Explorer",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:00.955Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:00.958Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:00.974Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:00.991Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:01.004Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:01.017Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:01.029Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:01.040Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:01.052Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:40.930Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:40.933Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:40.953Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:40.974Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:40.999Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:41.023Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:41.047Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:41.068Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:41.091Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:41.933Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - SETUP.md",
+      "duration": 64,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:43.949Z",
+      "app": "Brave Browser",
+      "title": "Meow - Let's Focus! - Brave",
+      "duration": 2,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:48.944Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:48.949Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:48.970Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:48.993Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:49.017Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:49.035Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:49.059Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:49.084Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:49.107Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:58.951Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:58.956Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:58.969Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:58.991Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:59.011Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:59.033Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:59.052Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:59.074Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:28:59.097Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:08.950Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:08.955Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:08.968Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:08.987Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:09.003Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:09.027Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:09.049Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:09.074Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:09.095Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:10.041Z",
+      "app": "Brave Browser",
+      "title": "ChatGPT - OS - Brave",
+      "duration": 26,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:18.957Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:18.960Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:18.975Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:18.986Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:19.000Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:19.014Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:19.028Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:19.043Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:19.056Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:28.955Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:28.958Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:28.972Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:28.986Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:29.000Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:29.014Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:29.026Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:29.038Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:29.051Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:32.141Z",
+      "app": "Antigravity",
+      "title": "Meow - Antigravity - SETUP.md",
+      "duration": 22,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:36.146Z",
+      "app": "Windows Explorer",
+      "title": ".meow - Search Results in user and 1 more tab - File Explorer",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.096Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.099Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.120Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.123Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.127Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.146Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.167Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.187Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:39.208Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:29:40.168Z",
+      "app": "Windows Explorer",
+      "title": ".meow-activity-log.json - Search Results in user and 1 more tab - File Explorer",
+      "duration": 4,
+      "type": "app"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:00.954Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 11,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:00.957Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 7,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:00.972Z",
+      "domain": "chatgpt.com",
+      "title": "ChatGPT - OS",
+      "duration": 27,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:00.986Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 29,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:01.000Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 12,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:01.013Z",
+      "domain": "canva.com",
+      "title": "Projects - Canva",
+      "duration": 8,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:01.027Z",
+      "domain": "gitlab.com",
+      "title": "Feature Update: Login Persistence, BLE Refresh, Cloud Device Overlay, and Custom Toast Notifications (!4) · Merge requests · Harit Vikas / Saaya-app · GitLab",
+      "duration": 19,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:01.043Z",
+      "domain": "localhost",
+      "title": "Meow - Let's Focus!",
+      "duration": 15,
+      "type": "tab"
+    },
+    {
+      "timestamp": "2026-03-09T20:30:01.057Z",
+      "domain": "canva.com",
+      "title": "Copy of I AM IT website issues and solutions - Presentation",
+      "duration": 10,
+      "type": "tab"
+    }
+  ],
+  "tabs": [],
+  "totals": {
+    "Antigravity": {
+      "totalDuration": 1065,
+      "visits": 18
+    },
+    "Brave Browser": {
+      "totalDuration": 263,
+      "visits": 15
+    },
+    "SnippingTool.exe": {
+      "totalDuration": 2,
+      "visits": 1
+    },
+    "Windows Shell Experience Host": {
+      "totalDuration": 2,
+      "visits": 1
+    },
+    "canva.com": {
+      "totalDuration": 1198,
+      "visits": 133
+    },
+    "gitlab.com": {
+      "totalDuration": 2772,
+      "visits": 198
+    },
+    "localhost": {
+      "totalDuration": 3366,
+      "visits": 198
+    },
+    "chatgpt.com": {
+      "totalDuration": 1782,
+      "visits": 66
+    },
+    "Windows Explorer": {
+      "totalDuration": 72,
+      "visits": 10
+    }
+  }
+}
