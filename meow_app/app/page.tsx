@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import CatEyes from "../components/cateyes";
 import Timer from "../components/Timer";
 import HandTracker from "../components/HandTracker";
-import ActivityTracker from "../components/ActivityTracker";
+import AppTracker from "../components/AppTracker";
 import ActivityHistory from "../components/ActivityHistory";
 import Onboarding from "../components/Onboarding";
 import MeowVoice from "../components/MeowVoice";
@@ -128,8 +128,8 @@ export default function Home() {
         {/* 👋 HAND TRACKING */}
         <HandTracker onWave={handleWave} />
 
-        {/* 💻 ACTIVITY TRACKING (Fixed Positioned) */}
-        <ActivityTracker onActivity={handleActivity} />
+        {/* 💻 APP TRACKING (Fixed Positioned) */}
+        <AppTracker onActivity={handleActivity} />
 
         {/* 📊 ACTIVITY HISTORY (Left Side) */}
         <ActivityHistory />

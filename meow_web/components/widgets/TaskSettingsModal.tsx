@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Trash2, CheckCircle2, Circle, Clock, Target, Search, BarChart3, ListTodo } from "lucide-react";
 import { Task } from "./TaskSection";
@@ -14,6 +15,11 @@ interface TaskSettingsModalProps {
 
 export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: TaskSettingsModalProps) {
     const [searchQuery, setSearchQuery] = React.useState("");
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const toggleComplete = (id: string) => {
         onUpdateTasks(tasks.map(t =>
@@ -46,7 +52,9 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
         totalTime: tasks.reduce((acc, t) => acc + t.focusTime, 0)
     };
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
         <AnimatePresence>
             {isOpen && (
                 <motion.div
@@ -55,15 +63,16 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                     exit={{ opacity: 0, y: "100%" }}
                     transition={{ type: "spring", damping: 25, stiffness: 200 }}
                     className="fixed inset-0 w-screen h-screen bg-background z-[1000] flex flex-col overflow-hidden"
+                    style={{ fontFamily: 'var(--font-malinton)' }}
                 >
                     {/* Header Overlay */}
-                    <div className="flex justify-between items-center px-10 py-8">
+                    <div className="flex justify-between items-center px-10 py-8 shrink-0">
                         <div className="flex items-center gap-4">
                             <div className="p-3 bg-foreground/5 rounded-2xl">
                                 <Target className="w-8 h-8" />
                             </div>
                             <div>
-                                <h2 className="text-3xl font-black tracking-tighter uppercase">Focus Center</h2>
+                                <h2 className="text-3xl font-black tracking-tighter uppercase" style={{ fontFamily: 'var(--font-damaris)' }}>Focus Center</h2>
                                 <p className="text-[10px] font-bold opacity-30 uppercase tracking-[0.4em] mt-1">Deep Work Dashboard</p>
                             </div>
                         </div>
@@ -92,7 +101,7 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                                 >
                                     <stat.icon className={`w-12 h-12 opacity-10 absolute -right-4 -bottom-4 rotate-12 group-hover:scale-125 transition-transform`} />
                                     <span className="text-[11px] font-black uppercase tracking-[0.2em] opacity-40">{stat.label}</span>
-                                    <p className="text-4xl font-black tracking-tighter tracking-tight">{stat.value}</p>
+                                    <p className="text-4xl font-black tracking-tighter tracking-tight" style={{ fontFamily: 'var(--font-damaris)' }}>{stat.value}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -202,6 +211,7 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                     `}</style>
                 </motion.div>
             )}
-        </AnimatePresence>
+        </AnimatePresence>,
+        document.body
     );
 }

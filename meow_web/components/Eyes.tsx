@@ -201,8 +201,16 @@ export default function CatEyes({ baseMood = "neutral", catXFraction = null, cat
   return (
     <div className="wrapper">
       <div className="eyes-container">
-        <div className={`eye left ${currentMood}`}></div>
-        <div className={`eye right ${currentMood}`}></div>
+        <div className={`eye left ${currentMood}`}>
+          <div className="pupil">
+            <div className="glare"></div>
+          </div>
+        </div>
+        <div className={`eye right ${currentMood}`}>
+          <div className="pupil">
+            <div className="glare"></div>
+          </div>
+        </div>
       </div>
       <style jsx>{`
         .wrapper {
@@ -213,51 +221,91 @@ export default function CatEyes({ baseMood = "neutral", catXFraction = null, cat
         }
         .eyes-container {
           display: flex;
-          gap: 30px;
+          gap: 40px;
           justify-content: center;
           align-items: center;
-          height: 100px;
+          height: 120px;
         }
         .eye {
           width: 90px;
           height: 90px;
           background: var(--eye-color);
           border: 1px solid var(--eye-border);
-          border-radius: 20px;
+          border-radius: 24px;
           flex-shrink: 0;
-          transition:
+          transition: 
             transform 0.12s cubic-bezier(0.22, 1, 0.36, 1),
             height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
             margin-top 0.4s cubic-bezier(0.22, 1, 0.36, 1),
             border-radius 0.4s cubic-bezier(0.22, 1, 0.36, 1),
             width 0.4s cubic-bezier(0.22, 1, 0.36, 1),
             clip-path 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-            background-color 0.3s ease,
-            border-color 0.3s ease;
+            opacity 0.4s ease;
           position: relative;
           overflow: hidden;
           transform: translate(${effectiveOffset.x}px, ${effectiveOffset.y}px);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        .eye.neutral { border-radius: 20px; height: 90px; }
-        .eye.happy { height: 60px; margin-top: 15px; border-radius: 50% 50% 20px 20px; }
-        .eye.happy::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: var(--background); border-radius: 50% 50% 0 0; }
-        .eye.very-happy { height: 40px; margin-top: 25px; border-radius: 50% 50% 18px 18px; transform: scaleX(1.1) translate(${effectiveOffset.x}px, ${effectiveOffset.y}px); }
-        .eye.very-happy::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: var(--background); border-radius: 50% 50% 0 0; }
-        .eye.angry { height: 80px; border-radius: 8px; }
-        .eye.angry.left { clip-path: polygon(0% 0%, 100% 40%, 100% 100%, 0% 100%); }
-        .eye.angry.right { clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 100%); }
-        .eye.serious { height: 45px; border-radius: 6px; margin-top: 15px; }
-        .eye.serious.left { clip-path: polygon(0% 10%, 100% 60%, 100% 100%, 0% 100%); }
-        .eye.serious.right { clip-path: polygon(0% 60%, 100% 10%, 100% 100%, 0% 100%); }
-        .eye.curious { height: 70px; border-radius: 12px; }
-        .eye.curious.left { height: 60px; margin-top: 10px; }
-        .eye.curious.right { clip-path: polygon(0% 10%, 100% 45%, 100% 100%, 0% 100%); }
-        .eye.sleeping { height: 6px; margin-top: 43px; border-radius: 3px; width: 80px; transform: translate(0, 0); opacity: 0.7; }
-        .eye.sad { height: 75px; border-radius: 15px; margin-top: 10px; }
-        .eye.sad.left { clip-path: polygon(0% 40%, 100% 10%, 100% 100%, 0% 100%); }
-        .eye.sad.right { clip-path: polygon(0% 10%, 100% 40%, 100% 100%, 0% 100%); }
-        .eye.blink { height: 4px; margin-top: 43px; border-radius: 2px; transform: translate(0, 0); }
+
+        .pupil {
+          width: 35%;
+          height: 45%;
+          background: var(--pupil-color);
+          border-radius: 50%;
+          position: relative;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          box-shadow: 0 0 15px var(--pupil-color);
+          opacity: 0.9;
+        }
+
+        .glare {
+          position: absolute;
+          top: 20%;
+          left: 20%;
+          width: 30%;
+          height: 30%;
+          background: white;
+          border-radius: 50%;
+          opacity: 0.5;
+        }
+
+        /* Responsive Moods */
+        .eye.neutral { border-radius: 24px; height: 90px; }
+        
+        .eye.happy { height: 65px; margin-top: 15px; border-radius: 50% 50% 24px 24px; }
+        .eye.happy .pupil { transform: translateY(-5px) scaleY(0.8); }
+        
+        .eye.very-happy { height: 45px; margin-top: 25px; border-radius: 50% 50% 18px 18px; transform: scaleX(1.15) translate(${effectiveOffset.x}px, ${effectiveOffset.y}px); }
+        .eye.very-happy .pupil { opacity: 0; }
+        
+        .eye.angry { height: 85px; border-radius: 12px; }
+        .eye.angry.left { clip-path: polygon(0% 0%, 100% 35%, 100% 100%, 0% 100%); }
+        .eye.angry.right { clip-path: polygon(0% 35%, 100% 0%, 100% 100%, 0% 100%); }
+        .eye.angry .pupil { height: 25%; transform: translateY(10px); }
+
+        .eye.serious { height: 50px; border-radius: 8px; margin-top: 15px; }
+        .eye.serious.left { clip-path: polygon(0% 15%, 100% 55%, 100% 100%, 0% 100%); }
+        .eye.serious.right { clip-path: polygon(0% 55%, 100% 15%, 100% 100%, 0% 100%); }
+        .eye.serious .pupil { width: 45%; height: 20%; border-radius: 4px; }
+
+        .eye.curious { height: 80px; border-radius: 16px; }
+        .eye.curious.left { height: 70px; margin-top: 10px; }
+        .eye.curious.right { clip-path: polygon(0% 15%, 100% 40%, 100% 100%, 0% 100%); }
+        .eye.curious .pupil { transform: scale(1.2); }
+
+        .eye.sleeping { height: 8px; margin-top: 45px; border-radius: 4px; width: 85px; transform: translate(0, 0); opacity: 0.4; }
+        .eye.sleeping .pupil { opacity: 0; }
+
+        .eye.sad { height: 80px; border-radius: 18px; margin-top: 10px; }
+        .eye.sad.left { clip-path: polygon(0% 35%, 100% 15%, 100% 100%, 0% 100%); }
+        .eye.sad.right { clip-path: polygon(0% 15%, 100% 35%, 100% 100%, 0% 100%); }
+        .eye.sad .pupil { transform: translateY(5px); opacity: 0.6; }
+
+        .eye.blink { height: 6px; margin-top: 45px; border-radius: 3px; transform: translate(0, 0); }
+        .eye.blink .pupil { opacity: 0; }
       `}</style>
     </div>
   );

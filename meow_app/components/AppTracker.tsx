@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSystemTracker } from "../hooks/useSystemTracker";
 
-export default function ActivityTracker() {
+export default function AppTracker() {
   const { currentApp, status, stats } = useSystemTracker();
 
   const formatDuration = (seconds: number) => {

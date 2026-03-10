@@ -15,9 +15,10 @@ export interface Task {
 interface TaskSectionProps {
     activeTaskId: string | null;
     onSetActiveTask: (id: string | null) => void;
+    className?: string;
 }
 
-export default function TaskSection({ activeTaskId, onSetActiveTask }: TaskSectionProps) {
+export default function TaskSection({ activeTaskId, onSetActiveTask, className }: TaskSectionProps) {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [newTaskTitle, setNewTaskTitle] = useState("");
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -92,13 +93,14 @@ export default function TaskSection({ activeTaskId, onSetActiveTask }: TaskSecti
     return (
         <>
             <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="fixed top-24 right-8 w-72 h-fit max-h-[60vh] bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-6 z-50 group/box hover:border-foreground/30 transition-all shadow-2xl shadow-black/10"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className={`w-full md:w-72 h-fit max-h-[60vh] bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-6 group/box hover:border-foreground/30 transition-all shadow-2xl shadow-black/10 ${className}`}
+                style={{ fontFamily: 'var(--font-malinton)' }}
             >
                 <div className="flex justify-between items-center pr-2">
                     <div className="flex flex-col gap-0.5">
-                        <h2 className="text-[10px] font-black uppercase tracking-[0.4em] opacity-40">Objective</h2>
+                        <h2 className="text-[10px] font-semibold uppercase tracking-[0.4em] opacity-40">Objective</h2>
                     </div>
                     <button
                         onClick={() => setIsSettingsOpen(true)}

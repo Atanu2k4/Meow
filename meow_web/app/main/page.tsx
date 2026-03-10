@@ -6,8 +6,8 @@ import CatEyes from "@/components/Eyes";
 import Timer from "@/components/Timer";
 import { SettingsButton } from "@/components/SettingsButton";
 import TaskSection from "@/components/widgets/TaskSection";
-import ActivityTracker from "@/components/widgets/ActivityTracker";
-import TabActivityTracker from "@/components/widgets/TabActivityTracker";
+import AppTracker from "@/components/widgets/AppTracker";
+import TabTracker from "@/components/widgets/TabTracker";
 import CompletionToast from "@/components/CompletionToast";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 // import WalkingCat from "@/components/WalkingCat";
@@ -101,47 +101,38 @@ export default function Home() {
   const Component = widgets.rain ? BackgroundBeamsWithCollision : "div";
 
   return (
-    <Component className={widgets.rain ? "min-h-screen" : "relative min-h-screen flex items-center justify-center bg-background text-foreground overflow-x-hidden transition-colors duration-500"}>
+    <Component className={widgets.rain ? "min-h-screen" : "relative min-h-screen bg-background text-foreground overflow-x-hidden transition-colors duration-500"}>
 
       <SettingsButton />
 
-      {/* User Profile Hook */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="fixed top-6 left-6 flex items-center gap-3 z-40 select-none group transition-all"
-      >
-        <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
-          <img
-            src={`/Avatars Icons/users-insights-svg-icons/${userInfo.avatar}`}
-            alt="User avatar"
-            className="w-full h-full object-cover"
-          />
+      {/* Main Layout Container */}
+      <div className="relative min-h-screen w-full flex flex-col lg:flex-row items-center justify-center p-6 lg:p-12 gap-8 lg:gap-0">
+        
+        {/* Left Side: App Tracker (Desktop) */}
+        <div className="lg:fixed lg:bottom-12 lg:left-12 z-40 w-full lg:w-auto flex flex-col items-center lg:items-start animate-enter [animation-delay:200ms]">
+          <AnimatePresence>
+            {widgets.activity && <AppTracker />}
+          </AnimatePresence>
         </div>
-        <div className="flex flex-col opacity-40 group-hover:opacity-100 transition-opacity">
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] leading-none mb-1">Welcome</span>
-          <span className="text-xs font-bold truncate max-w-[120px]">
-            {userInfo.name || "Guest"}
-          </span>
-        </div>
-      </motion.div>
 
-      <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40">
-        <span className="text-[10px] uppercase tracking-[0.4em] font-bold opacity-40 select-none pointer-events-none transition-opacity duration-500">
-          {timerState === "idle" ? "Ready to focus" : timerState === "running" ? "Deep Work" : "Resting"}
-        </span>
-      </div>
+        {/* Center: Hero Section (Eyes & Timer) */}
+        <main className="flex flex-col items-center justify-center gap-12 lg:gap-16 w-full max-w-2xl z-10 lg:-translate-y-8">
+           {/* Branding (Mobile) */}
+           <div className="lg:hidden flex flex-col items-center gap-2 mb-4 opacity-40">
+             <span className="text-[10px] font-semibold uppercase tracking-[0.5em]">Meow Companion</span>
+           </div>
 
-
-      <main className="relative z-10 flex flex-col items-center justify-center -translate-y-8 w-full max-w-4xl px-6">
-        <div className="flex flex-col items-center gap-12 lg:gap-16 w-full">
           <div className="flex flex-col items-center gap-6">
-            <div className="transition-all duration-700 hover:scale-105 active:scale-95 cursor-pointer">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="transition-all duration-700 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-sm p-8 rounded-[3rem] bg-foreground/[0.02]"
+            >
               <CatEyes
                 baseMood={getMoodFromState(timerState)}
                 catXFraction={catXFraction}
               />
-            </div>
+            </motion.div>
           </div>
 
           <Timer
@@ -151,29 +142,57 @@ export default function Home() {
             onComplete={handleTimerComplete}
             onSessionEnd={handleSessionEnd}
           />
+
+          <div className="fixed top-8 left-1/2 -translate-x-1/2 z-40 hidden lg:block">
+            <span className="text-[10px] uppercase tracking-[0.5em] font-semibold opacity-30 select-none pointer-events-none transition-opacity duration-500">
+              {timerState === "idle" ? "System Standby" : timerState === "running" ? "Interstellar Focus" : "Neural Rest"}
+            </span>
+          </div>
+        </main>
+
+        {/* Right Side: Tasks & Tab History (Desktop) */}
+        <div className="lg:fixed lg:top-12 lg:right-12 lg:bottom-12 z-40 w-full lg:w-auto flex flex-col gap-6 items-center lg:items-end lg:justify-between animate-enter [animation-delay:400ms]">
+          <div className="w-full lg:w-auto">
+            <AnimatePresence>
+              {widgets.tasks && (
+                <TaskSection
+                  activeTaskId={activeTaskId}
+                  onSetActiveTask={setActiveTaskId}
+                />
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="w-full lg:w-auto">
+            <AnimatePresence>
+              {widgets.tabHistory && (
+                <TabTracker />
+              )}
+            </AnimatePresence>
+          </div>
         </div>
-      </main>
 
-      <AnimatePresence>
-        {widgets.tasks && (
-          <TaskSection
-            activeTaskId={activeTaskId}
-            onSetActiveTask={setActiveTaskId}
-          />
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {widgets.activity && (
-          <ActivityTracker />
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {widgets.tabHistory && (
-          <TabActivityTracker />
-        )}
-      </AnimatePresence>
+        {/* User Profile Hook */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="lg:fixed top-6 left-6 flex items-center gap-3 z-50 select-none group transition-all p-4 lg:p-0"
+        >
+          <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity border border-foreground/10">
+            <img
+              src={`/Avatars Icons/users-insights-svg-icons/${userInfo.avatar}`}
+              alt="User avatar"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex flex-col opacity-40 group-hover:opacity-100 transition-opacity">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] leading-none mb-1">Pilot</span>
+            <span className="text-xs font-semibold truncate max-w-[120px]">
+              {userInfo.name || "Stray Cat"}
+            </span>
+          </div>
+        </motion.div>
+      </div>
 
       <CompletionToast
         show={showCompletion}
@@ -182,33 +201,29 @@ export default function Home() {
         subMessage={`Nice. You focused for ${Math.floor(lastSessionTime / 60)}m ${lastSessionTime % 60}s 🎯`}
       />
 
-      <footer className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+      <footer className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 pointer-events-none lg:pointer-events-auto">
         <div className="flex flex-col items-center gap-4">
-          <div className="mode-toggle-wrapper px-1 py-1">
-            <div className="mode-toggle relative flex w-[260px] h-[40px] bg-foreground/[0.03] border border-foreground/[0.08] backdrop-blur-md rounded-full">
+          <div className="mode-toggle-wrapper px-1 py-1 pointer-events-auto">
+            <div className="mode-toggle relative flex w-[260px] h-[40px] bg-foreground/[0.03] border border-foreground/[0.08] backdrop-blur-md rounded-full overflow-hidden">
               <motion.div
                 className="absolute top-1 left-1 bottom-1 w-[calc(50%-4px)] bg-foreground rounded-full shadow-lg"
                 animate={{ x: mode === "countup" ? 0 : "100%" }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
               <button
-                className={`flex-1 relative z-10 text-[11px] font-bold uppercase tracking-wider transition-colors duration-300 ${mode === "countup" ? "text-background" : "text-foreground opacity-50 hover:opacity-100"}`}
+                className={`flex-1 relative z-10 text-[11px] font-semibold uppercase tracking-wider transition-colors duration-300 ${mode === "countup" ? "text-background" : "text-foreground opacity-50 hover:opacity-100"}`}
                 onClick={() => setMode("countup")}
               >
                 Count Up
               </button>
               <button
-                className={`flex-1 relative z-10 text-[11px] font-bold uppercase tracking-wider transition-colors duration-300 ${mode === "countdown" ? "text-background" : "text-foreground opacity-50 hover:opacity-100"}`}
+                className={`flex-1 relative z-10 text-[11px] font-semibold uppercase tracking-wider transition-colors duration-300 ${mode === "countdown" ? "text-background" : "text-foreground opacity-50 hover:opacity-100"}`}
                 onClick={() => setMode("countdown")}
               >
                 Count Down
               </button>
             </div>
           </div>
-
-          <span className="text-[9px] tracking-[0.4em] uppercase font-bold opacity-40 pointer-events-none text-center">
-            Meow Focus Companion
-          </span>
         </div>
       </footer>
 

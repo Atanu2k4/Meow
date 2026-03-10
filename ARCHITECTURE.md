@@ -66,7 +66,7 @@ graph TD
         
         subgraph "Data Types"
             OS["App Switching (OS)"] --> Tracker
-            Tabs["Tab Switching (Browser)"] --> Ext
+            Tabs["Tab Tracking (Browser)"] --> Ext
         end
     end
     

@@ -60,7 +60,7 @@ npx meow-tracker
 
 ## 🛠️ Step 4: First-Time Interaction
 1.  Open `http://localhost:3000` in your browser.
-2.  Look at the **Tab Activity Tracker** (bottom right). It should show **🟢 Local Sync active**.
+2.  Look at the **Tab Tracker** (bottom right). It should show **🟢 Local Sync active**.
 3.  Browse a few websites (e.g., GitHub, YouTube) for at least 10 seconds.
 4.  Switch back to the Meow dashboard—you should see your website and app history appearing instantly.
 

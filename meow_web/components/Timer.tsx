@@ -363,8 +363,11 @@ export default function Timer({
           background: transparent;
           color: var(--foreground);
           opacity: 0.4;
-          font-family: 'Pixelify Sans', var(--font-pixel);
-          font-size: 14px;
+          font-family: var(--font-geist-sans), system-ui;
+          font-weight: 500;
+          font-size: 13px;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
           cursor: pointer;
           transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           border-bottom: 2px solid transparent;
@@ -406,8 +409,9 @@ export default function Timer({
           border: none;
           background: transparent;
           color: var(--foreground);
-          font-family: 'Pixelify Sans', var(--font-pixel);
-          font-size: 14px;
+          font-family: var(--font-geist-sans), system-ui;
+          font-weight: 500;
+          font-size: 13px;
           text-align: center;
           outline: none;
         }
@@ -434,12 +438,12 @@ export default function Timer({
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: 'Pixelify Sans', var(--font-pixel);
+          font-family: var(--font-geist-sans), system-ui;
           color: var(--foreground);
           font-weight: 500;
-          font-size: clamp(60px, 15vw, 130px);
+          font-size: clamp(70px, 15vw, 140px);
           line-height: 1;
-          letter-spacing: -2px;
+          letter-spacing: -0.02em;
           transition: color 0.3s ease;
           pointer-events: none;
           user-select: none;

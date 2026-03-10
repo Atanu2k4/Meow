@@ -138,7 +138,7 @@ ADVANCED
 
 PREMIUM
  ├── AI Coach
- ├── Activity Tracker
+ ├── App Tracker
  ├── Analytics
  ├── Sync
 

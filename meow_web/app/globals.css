@@ -2,8 +2,32 @@
 
 @font-face {
   font-family: 'Pixelify Sans';
-  src: url('/Fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
   font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Damaris';
+  src: url('/fonts/DamarisDemo-1jvaB.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Malinton';
+  src: url('/fonts/MalintonTrialVersion-Regular-BF672accc4a43ea.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Malinton';
+  src: url('/fonts/MalintonTrialVersion-Bold-BF672accc4407ad.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -14,6 +38,8 @@
   --foreground: #171717;
   --foreground-rgb: 23, 23, 23;
   --font-pixel: 'Pixelify Sans', system-ui;
+  --font-damaris: 'Damaris', serif;
+  --font-malinton: 'Malinton', sans-serif;
   --eye-bg: #e5e5e5;
   --eye-color: #000000;
   --eye-border: rgba(0, 0, 0, 0.1);
@@ -39,8 +65,35 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-pixel), Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--foreground-rgb), 0.1);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--foreground-rgb), 0.2);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--foreground-rgb), 0.1) transparent;
 }
 
 @keyframes fadeIn {

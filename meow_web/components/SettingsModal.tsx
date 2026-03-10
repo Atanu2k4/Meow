@@ -167,9 +167,9 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                                 <h3 className="text-[10px] uppercase tracking-[0.25em] font-extrabold opacity-40 mb-6 px-1">Widgets</h3>
                                 <div className="space-y-2">
                                     {[
-                                        { id: 'activity', label: 'Activity Tracker' },
+                                        { id: 'activity', label: 'App Tracker' },
                                         { id: 'tasks', label: 'Task List' },
-                                        { id: 'tabHistory', label: 'Tab Switch History' },
+                                        { id: 'tabHistory', label: 'Tab Tracker' },
                                         { id: 'rain', label: 'Rainy Theme' },
                                     ].map((item) => (
                                         <button
@@ -192,8 +192,8 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                                 <div className="space-y-3">
                                     <div className="p-5 rounded-3xl bg-red-500/[0.03] border border-red-500/10 space-y-4">
                                         <div className="space-y-1">
-                                            <h4 className="text-sm font-bold opacity-80">Local Activity History</h4>
-                                            <p className="text-[10px] opacity-40 leading-relaxed font-medium">This will permanently delete all app and tab switching logs from your local .meow-activity-log.json file.</p>
+                                            <h4 className="text-sm font-bold opacity-80">Local History</h4>
+                                            <p className="text-[10px] opacity-40 leading-relaxed font-medium">This will permanently delete all app and tab logs from your local .meow-activity-log.json file.</p>
                                         </div>
                                         <button
                                             onClick={() => {
