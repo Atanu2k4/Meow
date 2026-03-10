@@ -8,6 +8,7 @@ export interface ActivityData {
     title: string;
     timestamp: string;
     duration: number;
+    id?: number;
     type: 'app' | 'tab';
 }
 
@@ -68,13 +69,14 @@ export function useSystemTracker() {
         };
     }, []);
 
-    const logTabActivity = useCallback((domain: string, title: string, duration: number) => {
+    const logTabActivity = useCallback((domain: string, title: string, duration: number, id?: number) => {
         if (ws && ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({
                 type: 'TAB_LOG',
                 domain,
                 title,
-                duration
+                duration,
+                id
             }));
         }
     }, [ws]);

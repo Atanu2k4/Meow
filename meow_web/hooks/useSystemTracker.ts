@@ -8,6 +8,7 @@ export interface ActivityData {
     title: string;
     timestamp: string;
     duration: number;
+    id?: number;
     type: 'app' | 'tab';
 }
 

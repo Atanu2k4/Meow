@@ -78,6 +78,7 @@ function startTracking() {
       const currentTitle = current.title || "No Title";
 
       if (lastApp && (currentApp !== lastApp || currentTitle !== lastTitle)) {
+        console.log(`✨ Scope Change: ${currentApp} | ${currentTitle}`);
         const duration = Math.floor((Date.now() - startTime) / 1000);
         if (duration > 1) {
           logSession(lastApp, lastTitle, duration);
@@ -97,7 +98,7 @@ function startTracking() {
     } catch (err) {
       console.error("Tracking Error:", err);
     }
-  }, 2000);
+  }, 500);
 }
 
 function createTray() {

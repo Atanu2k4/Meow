@@ -15,18 +15,23 @@ export default function TabActivityTracker() {
       window.postMessage({ type: "MEOW_GET_DATA" }, "*");
     };
 
-    // Request immediately and then every 10 seconds to sync new sessions
+    // Request immediately and then every 1 second to sync new sessions
     requestData();
-    const interval = setInterval(requestData, 10000);
+    const interval = setInterval(requestData, 1000);
 
     const handler = (event: MessageEvent) => {
       if (event.data.type === "MEOW_DATA_RESPONSE") {
         setExtensionInstalled(true);
         const sessions = event.data.payload.sessions || [];
 
-        // Batch log all sessions for today
+        // Get already tracked IDs from stats
+        const trackedIds = new Set(stats.sessions.filter(s => s.type === 'tab').map(s => s.id));
+
+        // Only log new sessions that haven't been tracked yet
         sessions.forEach((s: any) => {
-          logTabActivity(s.domain, s.title, s.duration, s.id);
+          if (!trackedIds.has(s.id)) {
+            logTabActivity(s.domain, s.title, s.duration, s.id);
+          }
         });
       }
     };

@@ -61,6 +61,7 @@ setInterval(async () => {
 
         // If app changed, log the previous session
         if (lastApp && (currentApp !== lastApp || currentTitle !== lastTitle)) {
+            console.log(`✨ Scope Change: ${currentApp} | ${currentTitle}`);
             const duration = Math.floor((Date.now() - startTime) / 1000);
             if (duration > 1) { // Only log if > 1s
                 logSession(lastApp, lastTitle, duration);
@@ -84,7 +85,7 @@ setInterval(async () => {
     } catch (err) {
         // Silently handle errors
     }
-}, 2000);
+}, 500);
 
 wss.on("connection", (ws) => {
     console.log("🔗 Frontend connected");
