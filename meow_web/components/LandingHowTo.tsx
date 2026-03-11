@@ -54,7 +54,7 @@ export default function LandingHowTo() {
             <div className="max-w-7xl mx-auto">
                 {/* Massive Centered Heading */}
                 <div className="flex flex-col items-center mb-40 select-none">
-                    <h2 className="opacity-[0.15] text-[16vw] font-black pointer-events-none uppercase leading-none tracking-tighter whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-br from-foreground to-foreground/20">
+                    <h2 className="opacity-[0.15] text-[16vw] font-black pointer-events-none uppercase leading-none tracking-tighter whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-br from-foreground to-foreground/20" style={{ fontFamily: "var(--font-malinton)" }}>
                         Deploy
                     </h2>
                     <motion.div
@@ -88,7 +88,7 @@ export default function LandingHowTo() {
 
                             <div className="flex-grow text-center md:text-left">
                                 <div className="flex flex-col md:flex-row items-center md:items-center gap-3 mb-2">
-                                    <h3 className="text-2xl font-bold tracking-tight">{step.title}</h3>
+                                    <h3 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "var(--font-malinton)" }}>{step.title}</h3>
                                     {step.tag && (
                                         <span className="px-2 py-0.5 bg-foreground/5 text-[9px] font-bold rounded-md opacity-50 uppercase tracking-widest">{step.tag}</span>
                                     )}
@@ -136,7 +136,7 @@ export default function LandingHowTo() {
                                 <AlertCircle size={14} className="text-blue-400" />
                                 <span className="text-[10px] uppercase tracking-widest font-bold">Idea Incubator</span>
                             </div>
-                            <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 leading-none">
+                            <h3 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 leading-none" style={{ fontFamily: "var(--font-malinton)" }}>
                                 HAVE A <br /> <span className="opacity-40">VISION?</span>
                             </h3>
                             <p className="text-lg opacity-70">
@@ -145,10 +145,10 @@ export default function LandingHowTo() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                            <button className="px-10 py-5 bg-background text-foreground rounded-2xl font-bold text-lg hover:scale-[1.05] transition-transform">
+                            <button className="px-10 py-5 bg-background text-foreground rounded-2xl font-bold text-lg hover:scale-[1.05] transition-transform" style={{ fontFamily: "var(--font-malinton)" }}>
                                 Suggest Feature
                             </button>
-                            <button className="px-10 py-5 bg-background/10 border border-background/20 rounded-2xl font-bold text-lg hover:bg-background/20 transition-all">
+                            <button className="px-10 py-5 bg-background/10 border border-background/20 rounded-2xl font-bold text-lg hover:bg-background/20 transition-all" style={{ fontFamily: "var(--font-malinton)" }}>
                                 Join the Lab
                             </button>
                         </div>

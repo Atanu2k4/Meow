@@ -36,7 +36,7 @@ export default function LandingFeatures() {
             <div className="max-w-7xl mx-auto">
                 {/* Massive Heading restored to 20vw and original font */}
                 <div className="flex justify-center mb-40 select-none">
-                    <h2 className="opacity-[0.15] text-[18vw] font-black pointer-events-none uppercase leading-none tracking-tighter whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-br from-foreground to-foreground/20">
+                    <h2 className="opacity-[0.15] text-[18vw] font-black pointer-events-none uppercase leading-none tracking-tighter whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-br from-foreground to-foreground/20" style={{ fontFamily: "var(--font-malinton)" }}>
                         Features
                     </h2>
                 </div>

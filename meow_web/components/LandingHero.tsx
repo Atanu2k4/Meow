@@ -104,7 +104,7 @@ export default function LandingHero() {
                                 animate={{ y: 0 }}
                                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                                 className="text-7xl md:text-[10rem] font-black tracking-tighter leading-[0.85]"
-                                style={{ fontFamily: "var(--font-pixel)" }}
+                                style={{ fontFamily: "var(--font-malinton)" }}
                             >
                                 <span className="block relative">
                                     STAY
@@ -134,7 +134,7 @@ export default function LandingHero() {
 
                     <div className="flex flex-wrap gap-6 items-center">
                         <Link href="/main">
-                            <button className="group relative px-10 py-5 bg-foreground text-background font-bold text-xl uppercase tracking-widest transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.5)] dark:shadow-[4px_4px_0px_rgba(255,255,255,0.2)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-95 border border-foreground/10" style={{ fontFamily: "var(--font-pixel)" }}>
+                            <button className="group relative px-10 py-5 bg-foreground text-background font-bold text-xl uppercase tracking-widest transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.5)] dark:shadow-[4px_4px_0px_rgba(255,255,255,0.2)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] active:scale-95 border border-foreground/10" style={{ fontFamily: "var(--font-malinton)" }}>
                                 TRY IT!
                                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 animate-pulse" />
                             </button>

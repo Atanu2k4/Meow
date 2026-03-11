@@ -35,7 +35,7 @@ export default function LandingNavbar() {
 
                 <div className="flex items-center gap-4">
                     <Link href="/main">
-                        <button className="px-8 py-3 bg-foreground text-background rounded-xl font-bold text-xs uppercase tracking-widest hover:scale-[1.05] active:scale-95 transition-all shadow-lg hover:shadow-2xl">
+                        <button className="px-8 py-3 bg-foreground text-background rounded-xl font-bold text-xs uppercase tracking-widest hover:scale-[1.05] active:scale-95 transition-all shadow-lg hover:shadow-2xl" style={{ fontFamily: "var(--font-malinton)" }}>
                             Try It
                         </button>
                     </Link>
@@ -89,6 +89,7 @@ const Tab = ({ children, setPosition, href }: { children: React.ReactNode, setPo
                 });
             }}
             className="relative z-10 block cursor-pointer px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-foreground mix-blend-difference md:px-5 md:py-2"
+            style={{ fontFamily: "var(--font-malinton)" }}
         >
             <a href={href}>{children}</a>
         </li>
