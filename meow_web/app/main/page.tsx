@@ -76,8 +76,8 @@ export default function Home() {
 
   const getMoodFromState = (state: TimerState) => {
     switch (state) {
-      case "running": return "serious";
-      case "paused": return "sleeping";
+      case "running": return "happy";
+      case "paused": return "serious";
       default: return "neutral";
     }
   };
