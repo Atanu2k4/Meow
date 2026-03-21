@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Trash2, CheckCircle2, Circle, Target, Maximize2 } from "lucide-react";
-import { TaskSettingsModal } from "./TaskSettingsModal";
+import { TaskModal } from "../pages/TaskModal";
 
 export interface Task {
     id: string;
@@ -95,10 +95,10 @@ export default function TaskSection({ activeTaskId, onSetActiveTask, className }
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className={`w-full md:w-72 h-fit max-h-[60vh] bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-6 group/box hover:border-foreground/30 transition-all shadow-2xl shadow-black/10 ${className}`}
+                className={`w-full md:w-72 h-50 bg-foreground/4 border border-foreground/15 backdrop-blur-xl rounded-4xl p-6 flex flex-col gap-6 group/box hover:border-foreground/30 transition-all shadow-2xl shadow-black/10 ${className}`}
                 style={{ fontFamily: 'var(--font-malinton)' }}
             >
-                <div className="flex justify-between items-center pr-2">
+                <div className="flex justify-between items-center pr-2 shrink-0">
                     <div className="flex flex-col gap-0.5">
                         <h2 className="text-[10px] font-semibold uppercase tracking-[0.4em] opacity-40">Objective</h2>
                     </div>
@@ -110,13 +110,13 @@ export default function TaskSection({ activeTaskId, onSetActiveTask, className }
                     </button>
                 </div>
 
-                <form onSubmit={addTask} className="relative">
+                <form onSubmit={addTask} className="relative shrink-0">
                     <input
                         type="text"
                         value={newTaskTitle}
                         onChange={(e) => setNewTaskTitle(e.target.value)}
                         placeholder="Focus on..."
-                        className="w-full bg-transparent border-b border-foreground/[0.1] py-2 px-0 text-xs focus:outline-none focus:border-foreground/40 transition-all placeholder:opacity-30 placeholder:italic"
+                        className="w-full bg-transparent border-b border-foreground/10 py-2 px-0 text-xs focus:outline-none focus:border-foreground/40 transition-all placeholder:opacity-30 placeholder:italic"
                     />
                     <button
                         type="submit"
@@ -126,7 +126,7 @@ export default function TaskSection({ activeTaskId, onSetActiveTask, className }
                     </button>
                 </form>
 
-                <div className="flex flex-col gap-1 overflow-y-auto pr-1 custom-scrollbar" data-lenis-prevent>
+                <div className="flex flex-col gap-1 flex-1 overflow-y-auto pr-1 custom-scrollbar min-h-0" data-lenis-prevent>
                     <AnimatePresence initial={false}>
                         {tasks.length === 0 ? (
                             <div className="py-4 flex flex-col items-center justify-center gap-2 opacity-10">
@@ -142,13 +142,13 @@ export default function TaskSection({ activeTaskId, onSetActiveTask, className }
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.95 }}
                                     className={`group flex items-center gap-3 p-2.5 rounded-2xl transition-all ${activeTaskId === task.id
-                                        ? "bg-foreground/[0.08] shadow-sm"
-                                        : "hover:bg-foreground/[0.04]"
+                                        ? "bg-foreground/8 shadow-sm"
+                                        : "hover:bg-foreground/4"
                                         }`}
                                 >
                                     <button
                                         onClick={() => toggleComplete(task.id)}
-                                        className="flex-shrink-0 transition-all"
+                                        className="shrink-0 transition-all"
                                     >
                                         {task.completed ? (
                                             <CheckCircle2 size={14} className="opacity-50" />
@@ -178,7 +178,7 @@ export default function TaskSection({ activeTaskId, onSetActiveTask, className }
 
                                     <button
                                         onClick={() => deleteTask(task.id)}
-                                        className="opacity-0 group-hover:opacity-20 hover:!opacity-60 transition-opacity p-1"
+                                        className="opacity-0 group-hover:opacity-20 hover:opacity-60! transition-opacity p-1"
                                     >
                                         <Trash2 size={10} />
                                     </button>
@@ -202,7 +202,7 @@ export default function TaskSection({ activeTaskId, onSetActiveTask, className }
           `}</style>
             </motion.div>
 
-            <TaskSettingsModal
+            <TaskModal
                 isOpen={isSettingsOpen}
                 onClose={() => setIsSettingsOpen(false)}
                 tasks={tasks}

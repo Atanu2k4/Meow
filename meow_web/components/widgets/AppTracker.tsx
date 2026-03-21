@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Activity, Clock, History, Trash2, Maximize2 } from "lucide-react";
 
 import { useSystemTracker } from "@/hooks/useSystemTracker";
-import { AppModal } from "./AppModal";
+import { AppModal } from "../pages/AppModal";
 
 interface AppTrackerProps {
     className?: string;
@@ -55,7 +55,7 @@ export default function AppTracker({ className }: AppTrackerProps) {
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className={`w-full md:w-64 bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-4 group transition-all shadow-2xl shadow-black/10 hover:border-foreground/30 ${className}`}
+                className={`w-full md:w-72 bg-foreground/4 border border-foreground/15 backdrop-blur-xl rounded-4xl p-6 flex flex-col gap-4 group transition-all shadow-2xl shadow-black/10 hover:border-foreground/30 ${className}`}
                 style={{ fontFamily: 'var(--font-malinton)' }}
             >
                 <div className="flex items-center justify-between">
@@ -99,7 +99,7 @@ export default function AppTracker({ className }: AppTrackerProps) {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-foreground/5" />
+                <div className="h-px w-full bg-foreground/5" />
 
                 {/* Recent Apps */}
                 <div>
@@ -121,7 +121,7 @@ export default function AppTracker({ className }: AppTrackerProps) {
                                     className="p-3 rounded-xl bg-foreground/5"
                                 >
                                     <div className="flex justify-between text-[10px] opacity-50 mb-1">
-                                        <span className="truncate max-w-[120px]">{session.app}</span>
+                                        <span className="truncate max-w-30">{session.app}</span>
                                         <span>{formatTime(session.duration)}</span>
                                     </div>
                                     <div className="text-[11px] font-bold truncate">
@@ -135,7 +135,7 @@ export default function AppTracker({ className }: AppTrackerProps) {
                     </div>
                 </div>
 
-                <div className="h-[1px] w-full bg-foreground/5" />
+                <div className="h-px w-full bg-foreground/5" />
 
                 {/* Top Apps */}
                 <div>
@@ -153,7 +153,7 @@ export default function AppTracker({ className }: AppTrackerProps) {
                             .slice(0, 3)
                             .map(([app, data]) => (
                                 <div key={app} className="flex justify-between items-center text-[10px] p-3 rounded-xl bg-foreground/5">
-                                    <span className="opacity-80 font-medium truncate max-w-[140px] text-[11px]">{app}</span>
+                                    <span className="opacity-80 font-medium truncate max-w-35 text-[11px]">{app}</span>
                                     <span className="font-bold opacity-60">{formatTime(data.totalDuration)}</span>
                                 </div>
                             ))

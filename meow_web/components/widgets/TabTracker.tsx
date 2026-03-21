@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Clock, History, Maximize2 } from "lucide-react";
 import { useSystemTracker } from "@/hooks/useSystemTracker";
-import { TabModal } from "./TabModal";
+import { TabModal } from "../pages/TabModal";
 
 interface TabTrackerProps {
   className?: string;
@@ -78,7 +78,7 @@ export default function TabTracker({ className }: TabTrackerProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={`w-full md:w-72 bg-foreground/[0.04] border border-foreground/[0.15] backdrop-blur-xl rounded-[2rem] p-6 flex flex-col gap-6 group transition-all shadow-2xl hover:border-foreground/30 ${className}`}
+        className={`w-full md:w-72 bg-foreground/4 border border-foreground/15 backdrop-blur-xl rounded-4xl p-6 flex flex-col gap-6 group transition-all shadow-2xl hover:border-foreground/30 ${className}`}
         style={{ fontFamily: 'var(--font-malinton)' }}
       >
         <div className="flex items-center justify-between">
@@ -118,7 +118,7 @@ export default function TabTracker({ className }: TabTrackerProps) {
                 className="p-3 rounded-xl bg-foreground/5"
               >
                 <div className="flex justify-between text-[10px] opacity-50 mb-1">
-                  <span className="truncate max-w-[120px]">{session.domain}</span>
+                  <span className="truncate max-w-30">{session.domain}</span>
                   <span>{formatDuration(session.duration)}</span>
                 </div>
                 <div className="text-[11px] font-bold truncate">
@@ -132,7 +132,7 @@ export default function TabTracker({ className }: TabTrackerProps) {
           </div>
         </div>
 
-        <div className="h-[1px] bg-foreground/10" />
+        <div className="h-px bg-foreground/10" />
 
         {/* Aggregated Totals */}
         <div>
@@ -149,7 +149,7 @@ export default function TabTracker({ className }: TabTrackerProps) {
                 key={domain}
                 className="p-3 rounded-xl bg-foreground/5 flex justify-between text-xs items-center"
               >
-                <span className="truncate max-w-[140px] text-[11px] font-medium">{domain}</span>
+                <span className="truncate max-w-35 text-[11px] font-medium">{domain}</span>
                 <span className="font-bold text-[10px] opacity-60">
                   {formatDuration(data.totalDuration)}
                 </span>
@@ -168,4 +168,4 @@ export default function TabTracker({ className }: TabTrackerProps) {
       />
     </>
   );
-}
+}

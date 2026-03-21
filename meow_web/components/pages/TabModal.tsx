@@ -59,11 +59,11 @@ export function TabModal({ isOpen, onClose }: TabModalProps) {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 1.1 }}
-                    transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                    className="fixed inset-0 w-screen h-screen bg-background z-[1000] flex flex-col overflow-hidden"
+                    initial={{ opacity: 0, y: "100%" }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: "100%" }}
+                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                    className="fixed inset-0 w-screen h-screen bg-background z-1000 flex flex-col overflow-hidden"
                     style={{ fontFamily: 'var(--font-malinton)' }}
                 >
                     {/* Header Overlay */}
@@ -98,7 +98,7 @@ export function TabModal({ isOpen, onClose }: TabModalProps) {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.1 + i * 0.1 }}
-                                    className="p-8 rounded-[40px] bg-foreground/[0.03] border border-foreground/[0.05] flex flex-col gap-4 relative overflow-hidden group hover:bg-foreground/[0.05] transition-all"
+                                    className="p-8 rounded-[40px] bg-foreground/3 border border-foreground/5 flex flex-col gap-4 relative overflow-hidden group hover:bg-foreground/5 transition-all"
                                 >
                                     <stat.icon className={`w-12 h-12 opacity-5 absolute -right-4 -bottom-4 rotate-12 group-hover:scale-125 transition-transform`} />
                                     <span className="text-[11px] font-black uppercase tracking-[0.2em] opacity-40">{stat.label}</span>
@@ -120,7 +120,7 @@ export function TabModal({ isOpen, onClose }: TabModalProps) {
                                             placeholder="Audit domain..."
                                             value={searchQuery}
                                             onChange={(e) => setSearchQuery(e.target.value)}
-                                            className="w-full bg-foreground/[0.03] border border-transparent focus:border-foreground/10 py-3 pl-12 pr-4 rounded-2xl text-xs outline-none transition-all"
+                                            className="w-full bg-foreground/3 border border-transparent focus:border-foreground/10 py-3 pl-12 pr-4 rounded-2xl text-xs outline-none transition-all"
                                         />
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@ export function TabModal({ isOpen, onClose }: TabModalProps) {
                                                 initial={{ opacity: 0, x: -20 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: idx * 0.02 }}
-                                                className="group flex items-center justify-between p-6 rounded-[32px] bg-foreground/[0.03] border border-transparent hover:border-foreground/10 hover:bg-foreground/[0.05] transition-all"
+                                                className="group flex items-center justify-between p-6 rounded-4xl bg-foreground/3 border border-transparent hover:border-foreground/10 hover:bg-foreground/5 transition-all"
                                             >
                                                 <div className="flex items-center gap-4">
                                                     <div className="w-12 h-12 rounded-2xl bg-foreground/5 flex items-center justify-center text-xl font-bold opacity-40">
@@ -172,7 +172,7 @@ export function TabModal({ isOpen, onClose }: TabModalProps) {
                                 <div className="flex-1 overflow-y-auto pr-4 space-y-4 custom-scrollbar" data-lenis-prevent>
                                     {recentTabs.slice(0, 20).map((tab, idx) => (
                                         <div key={idx} className="relative pl-6 pb-6 border-l border-foreground/10 last:pb-0">
-                                            <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-foreground/20" />
+                                            <div className="absolute -left-1.25 top-0 w-2.5 h-2.5 rounded-full bg-foreground/20" />
                                             <div className="flex flex-col gap-1">
                                                 <div className="flex justify-between items-center">
                                                     <span className="text-[10px] font-black text-blue-500/60 uppercase tracking-widest">{tab.domain}</span>

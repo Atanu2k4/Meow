@@ -79,7 +79,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-background/60 backdrop-blur-sm z-100"
+                        className="fixed inset-0 bg-background/60 backdrop-blur-sm z-[100]"
                     />
 
                     {/* Modal */}
@@ -87,7 +87,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-2xl max-h-[90vh] flex flex-col bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-32px shadow-2xl z-101"
+                        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-2xl max-h-[90vh] flex flex-col bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-[32px] shadow-2xl z-[101]"
                     >
                         <div className="flex justify-between items-center p-8 pb-4">
                             <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
@@ -206,7 +206,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                                         <button
                                             key={item.id}
                                             onClick={() => toggleWidget(item.id as keyof typeof widgets)}
-                                            className="w-full flex justify-between items-center p-4 rounded-2xl bg-foreground/5 hover:bg-foreground/0.08 transition-all group"
+                                            className="w-full flex justify-between items-center p-4 rounded-2xl bg-foreground/5 hover:bg-foreground/[0.08] transition-all group"
                                         >
                                             <span className="text-sm font-semibold opacity-70 group-hover:opacity-100">{item.label}</span>
                                             <div className={`w-10 h-5 rounded-full relative transition-all duration-300 ${widgets[item.id as keyof typeof widgets] ? 'bg-foreground' : 'bg-foreground/10'}`}>
@@ -221,7 +221,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                             <section>
                                 <h3 className="text-[10px] uppercase tracking-[0.25em] font-extrabold opacity-40 mb-6 px-1 text-red-500/80">Privacy & Data</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <div className="p-5 rounded-3xl bg-red-500/3 border border-red-500/10 flex flex-col justify-between space-y-4">
+                                    <div className="p-5 rounded-3xl bg-red-500/[0.03] border border-red-500/10 flex flex-col justify-between space-y-4">
                                         <div className="space-y-1">
                                             <h4 className="text-sm font-bold opacity-80">Local History</h4>
                                             <p className="text-[10px] opacity-40 leading-relaxed font-medium">This will permanently delete all app and tab logs from your local .meow-activity-log.json file.</p>
@@ -238,7 +238,7 @@ export function SettingsModal({ isOpen, onClose }: SettingsModalProps) {
                                         </button>
                                     </div>
 
-                                    <div className="p-5 rounded-3xl bg-foreground/3 border border-foreground/5 flex flex-col justify-between space-y-4">
+                                    <div className="p-5 rounded-3xl bg-foreground/[0.03] border border-foreground/5 flex flex-col justify-between space-y-4">
                                         <div className="space-y-1">
                                             <h4 className="text-sm font-bold opacity-80">App Preferences</h4>
                                             <p className="text-[10px] opacity-40 leading-relaxed font-medium">Resets your username, avatar selection, and widget preferences. Your history remains safe.</p>

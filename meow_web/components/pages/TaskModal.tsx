@@ -4,16 +4,16 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Trash2, CheckCircle2, Circle, Clock, Target, Search, BarChart3, ListTodo } from "lucide-react";
-import { Task } from "./TaskSection";
+import { Task } from "../widgets/TaskSection";
 
-interface TaskSettingsModalProps {
+interface TaskModalProps {
     isOpen: boolean;
     onClose: () => void;
     tasks: Task[];
     onUpdateTasks: (tasks: Task[]) => void;
 }
 
-export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: TaskSettingsModalProps) {
+export function TaskModal({ isOpen, onClose, tasks, onUpdateTasks }: TaskModalProps) {
     const [searchQuery, setSearchQuery] = React.useState("");
     const [mounted, setMounted] = React.useState(false);
 
@@ -62,7 +62,7 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: "100%" }}
                     transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                    className="fixed inset-0 w-screen h-screen bg-background z-[1000] flex flex-col overflow-hidden"
+                    className="fixed inset-0 w-screen h-screen bg-background z-1000 flex flex-col overflow-hidden"
                     style={{ fontFamily: 'var(--font-malinton)' }}
                 >
                     {/* Header Overlay */}
@@ -97,11 +97,11 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.1 + i * 0.1 }}
-                                    className="p-8 rounded-[40px] bg-foreground/[0.03] border border-foreground/[0.05] flex flex-col gap-4 relative overflow-hidden group hover:bg-foreground/[0.05] transition-all"
+                                    className="p-8 rounded-[40px] bg-foreground/3 border border-foreground/5 flex flex-col gap-4 relative overflow-hidden group hover:bg-foreground/5 transition-all"
                                 >
                                     <stat.icon className={`w-12 h-12 opacity-10 absolute -right-4 -bottom-4 rotate-12 group-hover:scale-125 transition-transform`} />
                                     <span className="text-[11px] font-black uppercase tracking-[0.2em] opacity-40">{stat.label}</span>
-                                    <p className="text-4xl font-black tracking-tighter tracking-tight" style={{ fontFamily: 'var(--font-damaris)' }}>{stat.value}</p>
+                                    <p className="text-4xl font-black tracking-tight" style={{ fontFamily: 'var(--font-damaris)' }}>{stat.value}</p>
                                 </motion.div>
                             ))}
                         </div>
@@ -119,7 +119,7 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                                             placeholder="Find mission..."
                                             value={searchQuery}
                                             onChange={(e) => setSearchQuery(e.target.value)}
-                                            className="w-full bg-foreground/[0.03] border border-transparent focus:border-foreground/10 py-3 pl-12 pr-4 rounded-2xl text-xs outline-none transition-all"
+                                            className="w-full bg-foreground/3 border border-transparent focus:border-foreground/10 py-3 pl-12 pr-4 rounded-2xl text-xs outline-none transition-all"
                                         />
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
                                                     animate={{ opacity: 1, x: 0 }}
                                                     exit={{ opacity: 0, scale: 0.95 }}
                                                     transition={{ delay: idx * 0.05 }}
-                                                    className="group flex items-center gap-6 p-6 rounded-[32px] bg-foreground/[0.03] border border-transparent hover:border-foreground/10 hover:bg-foreground/[0.05] transition-all"
+                                                    className="group flex items-center gap-6 p-6 rounded-4xl bg-foreground/3 border border-transparent hover:border-foreground/10 hover:bg-foreground/5 transition-all"
                                                 >
                                                     <button
                                                         onClick={() => toggleComplete(task.id)}
@@ -178,7 +178,7 @@ export function TaskSettingsModal({ isOpen, onClose, tasks, onUpdateTasks }: Tas
 
                                                     <button
                                                         onClick={() => deleteTask(task.id)}
-                                                        className="p-3 opacity-0 group-hover:opacity-20 hover:!opacity-100 hover:bg-red-500/10 hover:text-red-500 rounded-2xl transition-all"
+                                                        className="p-3 opacity-0 group-hover:opacity-20 hover:opacity-100! hover:bg-red-500/10 hover:text-red-500 rounded-2xl transition-all"
                                                     >
                                                         <Trash2 className="w-5 h-5" />
                                                     </button>
