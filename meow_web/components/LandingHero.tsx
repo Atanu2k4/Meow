@@ -15,6 +15,7 @@ export default function LandingHero() {
 
     return (
         <section
+            id="home"
             ref={containerRef}
             className="relative w-full min-h-[100svh] overflow-hidden flex items-center"
         >
@@ -52,7 +53,7 @@ export default function LandingHero() {
                         initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
                         animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                        className="mb-8"
+                        className="mb-6"
                     >
                         <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
                             <span className="relative flex h-2 w-2">
@@ -70,7 +71,7 @@ export default function LandingHero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-6xl md:text-8xl lg:text-[140px] font-normal leading-none tracking-tighter mb-8"
+                        className="text-4xl md:text-6xl lg:text-[100px] font-normal leading-none tracking-tighter mb-6"
                         style={{ color: "#ffffff", textShadow: "0 10px 40px rgba(0,0,0,0.3)", fontFamily: "var(--font-malinton)" }}
                     >
                         <span className="block mb-[0.1em]">Focus.</span>
@@ -86,7 +87,7 @@ export default function LandingHero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-lg md:text-xl leading-relaxed mb-12 text-white/80 max-w-lg font-light"
+                        className="text-base md:text-lg leading-relaxed mb-8 text-white/80 max-w-lg font-light"
                     >
                         The ultimate companion for deep work. <br className="hidden md:block" />
                         Track your habits, monitor your tabs, and <br className="hidden md:block" />
@@ -102,7 +103,7 @@ export default function LandingHero() {
                     >
                         <Link href="/login" className="w-full sm:w-auto">
                             <button
-                                className="group relative w-full sm:w-auto px-8 py-4 bg-white text-black rounded-2xl text-lg tracking-wide overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+                                className="group relative w-full sm:w-auto px-6 py-3 bg-white text-black rounded-2xl text-base tracking-wide overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
                                 style={{ fontFamily: "var(--font-malinton)" }}
                             >
                                 {/* Subtle hover glow inside the button */}
@@ -117,7 +118,7 @@ export default function LandingHero() {
                         </Link>
 
                         <Link href="#features" className="w-full sm:w-auto">
-                            <button className="w-full sm:w-auto px-8 py-4 rounded-2xl text-white/80 text-lg tracking-wide transition-all duration-300 border border-white/10 bg-white/5 hover:bg-white/10 hover:text-white backdrop-blur-sm" style={{ fontFamily: "var(--font-malinton)" }}>
+                            <button className="w-full sm:w-auto px-6 py-3 rounded-2xl text-white/80 text-base tracking-wide transition-all duration-300 border border-white/10 bg-white/5 hover:bg-white/10 hover:text-white backdrop-blur-sm" style={{ fontFamily: "var(--font-malinton)" }}>
                                 View Features
                             </button>
                         </Link>

@@ -271,18 +271,7 @@ export default function LandingFeatures() {
                                             {feat.description}
                                         </p>
 
-                                        {/* Read more link */}
-                                        <div className="mt-auto pt-6 border-t border-black/[0.04]">
-                                            <div 
-                                                className="inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase group-hover:gap-3 transition-all duration-300"
-                                                style={{ color: "#111" }}
-                                            >
-                                                Explore Feature
-                                                <svg className="w-3.5 h-3.5 transition-transform duration-300 text-black/40 group-hover:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                                </svg>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </motion.div>

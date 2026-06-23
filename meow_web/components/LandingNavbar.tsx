@@ -17,24 +17,26 @@ export default function LandingNavbar() {
         <div className="fixed top-0 left-0 right-0 z-50 flex justify-center">
             <AnimatePresence mode="wait">
                 {!scrolled ? (
-                    /* ── Transparent floating bar ── */
+                    /* ── Clean Transparent Header ── */
                     <motion.nav
                         key="transparent"
                         initial={{ y: -80, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: -40, opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                        className="w-[95%] max-w-7xl mx-auto flex items-center justify-between px-8 md:px-14 pt-4 pb-4 mt-6 rounded-3xl"
-                        style={{
-                            backgroundColor: "rgba(0,0,0,0.15)",
-                            backdropFilter: "blur(20px)",
-                            WebkitBackdropFilter: "blur(20px)",
-                            border: "1px solid rgba(255,255,255,0.08)",
-                            boxShadow: "0 10px 40px rgba(0,0,0,0.2)"
-                        }}
+                        className="w-[95%] max-w-7xl mx-auto flex items-center justify-between px-8 md:px-14 pt-8 pb-4"
                     >
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-2.5 group">
+                        <Link 
+                            href="/#home" 
+                            onClick={(e) => {
+                                if (typeof window !== 'undefined' && window.location.pathname === '/') {
+                                    e.preventDefault();
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }
+                            }}
+                            className="flex items-center gap-2.5 group"
+                        >
                             <div
                                 className="w-8 h-8 flex items-center justify-center rounded-lg"
                                 style={{ backgroundColor: "rgba(255,255,255,0.15)", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.2)" }}
@@ -119,7 +121,16 @@ export default function LandingNavbar() {
                         }}
                     >
                         {/* Logo pill */}
-                        <Link href="/" className="flex items-center gap-2 pl-2 pr-3 py-1 rounded-full transition-colors duration-150 hover:bg-white/[0.06]">
+                        <Link 
+                            href="/#home" 
+                            onClick={(e) => {
+                                if (typeof window !== 'undefined' && window.location.pathname === '/') {
+                                    e.preventDefault();
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }
+                            }}
+                            className="flex items-center gap-2 pl-2 pr-3 py-1 rounded-full transition-colors duration-150 hover:bg-white/[0.06]"
+                        >
                             <div
                                 className="w-5 h-5 rounded-md flex items-center justify-center"
                                 style={{ backgroundColor: "#fff" }}
