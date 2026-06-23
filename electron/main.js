@@ -504,7 +504,7 @@ function createTray() {
     { type: 'separator' },
     {
       label: 'Open Dashboard',
-      click: () => shell.openExternal("https://hi-meow.vercel.app/main")
+      click: () => shell.openExternal("https://hi-meow.vercel.app/dashboard")
     },
     {
       label: 'View Local Stats',
@@ -518,7 +518,6 @@ function createTray() {
       }
     },
     { type: 'separator' },
-    { label: '🎯 Focus Dashboard', click: () => createDashboardWindow() },
     { label: '▶️ Start Focus', click: () => startFocus() },
     { label: '⏹️ Stop Focus', click: () => stopFocus() },
     { type: 'separator' },
