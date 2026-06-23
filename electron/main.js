@@ -17,6 +17,8 @@ let lastApp = null;
 let lastTitle = null;
 let startTime = Date.now();
 let trackerWss = null;
+let isStandaloneTrackerRunning = false;
+let standaloneWsClient = null;
 
 // ═══════════════════════════════════════════════════
 //  FOCUSSYNC (desktop app functionality)
@@ -110,6 +112,11 @@ function setMasterTimerMode(mode, pomoDuration) {
 }
 
 function handleTimerAction(action) {
+  if (isStandaloneTrackerRunning && standaloneWsClient && standaloneWsClient.readyState === WebSocket.OPEN) {
+    standaloneWsClient.send(JSON.stringify({ type: 'TIMER_ACTION', action }));
+    return;
+  }
+  
   if (action.type === 'TOGGLE_PLAY') {
     masterTimer.isPaused ? startMasterTimer() : stopMasterTimer();
   } else if (action.type === 'RESET') {
@@ -117,6 +124,37 @@ function handleTimerAction(action) {
   } else if (action.type === 'SET_MODE') {
     setMasterTimerMode(action.mode, action.pomoDuration);
   }
+}
+
+function connectToStandaloneTracker() {
+  standaloneWsClient = new WebSocket(`ws://127.0.0.1:${TRACKER_PORT}`);
+  
+  standaloneWsClient.on('open', () => {
+    console.log("🔗 Connected to standalone tracker as client");
+  });
+
+  standaloneWsClient.on('message', (message) => {
+    try {
+      const data = JSON.parse(message);
+      if (data.type === 'TIMER_STATE') {
+        // Broadcast to Electron Notch Timer via IPC
+        if (timerOverlay && !timerOverlay.isDestroyed()) {
+          timerOverlay.webContents.send('timer-state-update', data.data);
+        }
+      }
+    } catch (e) {
+      console.error("Standalone WS message error:", e);
+    }
+  });
+
+  standaloneWsClient.on('error', (err) => {
+    console.error("Standalone WS client error:", err.message);
+  });
+
+  standaloneWsClient.on('close', () => {
+    console.log("❌ Disconnected from standalone tracker, retrying in 3s...");
+    setTimeout(connectToStandaloneTracker, 3000);
+  });
 }
 
 // ───────────────────────────────────────────────────
@@ -151,46 +189,48 @@ function startTrackerServer() {
 
   const server = serverApp.listen(TRACKER_PORT, '0.0.0.0', () => {
     console.log(`🟢 Meow Tray Backend running on http://localhost:${TRACKER_PORT}`);
+    
+    trackerWss = new WebSocket.Server({ server });
+
+    trackerWss.on("connection", (ws) => {
+      console.log("🔗 Frontend connected to Tray");
+      ws.send(JSON.stringify({ type: 'init', data: getStats() }));
+      // Immediately send current master timer state to newly connected website
+      ws.send(JSON.stringify({
+        type: 'TIMER_STATE',
+        data: {
+          seconds: masterTimer.seconds,
+          isPaused: masterTimer.isPaused,
+          mode: masterTimer.mode,
+          pomoDuration: masterTimer.pomoDuration
+        }
+      }));
+
+      ws.on("message", (message) => {
+        try {
+          const data = JSON.parse(message);
+          if (data.type === 'TAB_LOG') {
+            logTab(data.domain, data.title, data.duration, data.id);
+            trackerBroadcast({ type: 'stats', data: getStats() });
+          } else if (data.type === 'CLEAR_DATA') {
+            clearDB();
+            trackerBroadcast({ type: 'stats', data: getStats() });
+          } else if (data.type === 'TIMER_ACTION') {
+            handleTimerAction(data.action);
+          }
+        } catch (e) {
+          console.error("Msg error:", e);
+        }
+      });
+    });
   }).on('error', (err) => {
     if (err.code === 'EADDRINUSE') {
-      console.log(`⚠️  Port ${TRACKER_PORT} already in use. Tracker may already be running.`);
+      console.log(`⚠️  Port ${TRACKER_PORT} already in use. Connecting as client to standalone tracker...`);
+      isStandaloneTrackerRunning = true;
+      connectToStandaloneTracker();
     } else {
       console.error('❌ Tracker server error:', err);
     }
-  });
-
-  trackerWss = new WebSocket.Server({ server });
-
-  trackerWss.on("connection", (ws) => {
-    console.log("🔗 Frontend connected to Tray");
-    ws.send(JSON.stringify({ type: 'init', data: getStats() }));
-    // Immediately send current master timer state to newly connected website
-    ws.send(JSON.stringify({
-      type: 'TIMER_STATE',
-      data: {
-        seconds: masterTimer.seconds,
-        isPaused: masterTimer.isPaused,
-        mode: masterTimer.mode,
-        pomoDuration: masterTimer.pomoDuration
-      }
-    }));
-
-    ws.on("message", (message) => {
-      try {
-        const data = JSON.parse(message);
-        if (data.type === 'TAB_LOG') {
-          logTab(data.domain, data.title, data.duration, data.id);
-          trackerBroadcast({ type: 'stats', data: getStats() });
-        } else if (data.type === 'CLEAR_DATA') {
-          clearDB();
-          trackerBroadcast({ type: 'stats', data: getStats() });
-        } else if (data.type === 'TIMER_ACTION') {
-          handleTimerAction(data.action);
-        }
-      } catch (e) {
-        console.error("Msg error:", e);
-      }
-    });
   });
 }
 

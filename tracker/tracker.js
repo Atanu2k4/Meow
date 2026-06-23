@@ -41,6 +41,88 @@ let lastApp = null;
 let lastTitle = null;
 let startTime = Date.now();
 
+// ═══════════════════════════════════════════════════
+//  MASTER CLOCK (Timer Sync)
+// ═══════════════════════════════════════════════════
+const masterTimer = {
+    seconds: 0,
+    isPaused: true,
+    mode: 'stopwatch',
+    pomoDuration: 25 * 60,
+    intervalId: null
+};
+
+function broadcastTimerState() {
+    const state = {
+        type: 'TIMER_STATE',
+        data: {
+            seconds: masterTimer.seconds,
+            isPaused: masterTimer.isPaused,
+            mode: masterTimer.mode,
+            pomoDuration: masterTimer.pomoDuration
+        }
+    };
+    broadcast(state);
+}
+
+function startMasterTimer() {
+    if (!masterTimer.isPaused) return;
+    masterTimer.isPaused = false;
+    
+    masterTimer.intervalId = setInterval(() => {
+        if (masterTimer.mode === 'stopwatch') {
+            masterTimer.seconds++;
+        } else {
+            if (masterTimer.seconds <= 0) {
+                masterTimer.isPaused = true;
+                clearInterval(masterTimer.intervalId);
+                masterTimer.intervalId = null;
+            } else {
+                masterTimer.seconds--;
+            }
+        }
+        broadcastTimerState();
+    }, 1000);
+    
+    broadcastTimerState();
+}
+
+function stopMasterTimer() {
+    if (masterTimer.isPaused) return;
+    masterTimer.isPaused = true;
+    if (masterTimer.intervalId) {
+        clearInterval(masterTimer.intervalId);
+        masterTimer.intervalId = null;
+    }
+    broadcastTimerState();
+}
+
+function resetMasterTimer() {
+    stopMasterTimer();
+    masterTimer.seconds = masterTimer.mode === 'pomodoro' ? masterTimer.pomoDuration : 0;
+    broadcastTimerState();
+}
+
+function setMasterTimerMode(mode, pomoDuration) {
+    stopMasterTimer();
+    masterTimer.mode = mode;
+    if (pomoDuration !== undefined) {
+        masterTimer.pomoDuration = pomoDuration;
+    }
+    masterTimer.seconds = masterTimer.mode === 'pomodoro' ? masterTimer.pomoDuration : 0;
+    broadcastTimerState();
+}
+
+function handleTimerAction(action) {
+    if (action.type === 'TOGGLE_PLAY') {
+        masterTimer.isPaused ? startMasterTimer() : stopMasterTimer();
+    } else if (action.type === 'RESET') {
+        resetMasterTimer();
+    } else if (action.type === 'SET_MODE') {
+        setMasterTimerMode(action.mode, action.pomoDuration);
+    }
+}
+
 // Broadcast function to all connected clients
 function broadcast(data) {
     wss.clients.forEach((client) => {
@@ -90,6 +172,16 @@ setInterval(async () => {
 wss.on("connection", async (ws) => {
     console.log("🔗 Frontend connected");
     ws.send(JSON.stringify({ type: 'init', data: await getStats() }));
+    // Immediately send current master timer state to newly connected website
+    ws.send(JSON.stringify({
+        type: 'TIMER_STATE',
+        data: {
+            seconds: masterTimer.seconds,
+            isPaused: masterTimer.isPaused,
+            mode: masterTimer.mode,
+            pomoDuration: masterTimer.pomoDuration
+        }
+    }));
 
     ws.on("message", async (message) => {
         try {
@@ -100,6 +192,8 @@ wss.on("connection", async (ws) => {
             } else if (data.type === 'CLEAR_DATA') {
                 await clearDB();
                 broadcast({ type: 'stats', data: await getStats() });
+            } else if (data.type === 'TIMER_ACTION') {
+                handleTimerAction(data.action);
             }
         } catch (e) {
             console.error("Msg error:", e);
