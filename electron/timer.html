@@ -45,7 +45,8 @@
 
     .timer-notch:active { cursor: grabbing; }
 
-    .timer-notch.settings-open { width: 240px; }
+    .timer-notch.pomodoro-mode { width: 240px; }
+    .timer-notch.settings-open { width: 260px; }
 
     /* Timer View */
     .timer-view {
@@ -159,7 +160,8 @@
       <!-- Timer View -->
       <div class="timer-view" id="timerView">
         <button class="timer-btn" id="modeBtn" title="Switch mode">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg id="stopwatchModeIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg id="pomodoroModeIcon" class="hidden" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><polyline points="12 9 12 13 14 15"/><line x1="10" y1="2" x2="14" y2="2"/><line x1="12" y1="2" x2="12" y2="5"/></svg>
         </button>
 
         <div class="controls">
@@ -219,6 +221,8 @@
     const editHours = document.getElementById('editHours');
     const editMinutes = document.getElementById('editMinutes');
     const editSeconds = document.getElementById('editSeconds');
+    const stopwatchModeIcon = document.getElementById('stopwatchModeIcon');
+    const pomodoroModeIcon = document.getElementById('pomodoroModeIcon');
 
     console.log('DOM elements loaded:', {
       notch: !!notch,
@@ -257,6 +261,13 @@
         updateDisplay();
         updatePlayPauseIcon();
         settingsBtn.classList.toggle('hidden', mode !== 'pomodoro');
+        stopwatchModeIcon.classList.toggle('hidden', mode === 'pomodoro');
+        pomodoroModeIcon.classList.toggle('hidden', mode !== 'pomodoro');
+        if (mode === 'pomodoro') {
+          notch.classList.add('pomodoro-mode');
+        } else {
+          notch.classList.remove('pomodoro-mode');
+        }
       });
     }
 
