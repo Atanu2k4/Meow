@@ -13,10 +13,12 @@ function LoginContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const message = searchParams.get('message')
+  const authError = searchParams.get('error')
   const [isSignUp, setIsSignUp] = useState(false)
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })
   const [time, setTime] = useState('')
   const [error, setError] = useState('')
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -200,14 +202,16 @@ function LoginContent() {
                 />
               </div>
 
-              {(message || error) && (
+              {(message || error || authError) && (
                 <motion.div
                   initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-center gap-2 p-3 border border-red-500/20 bg-red-500/5 text-sm"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse flex-shrink-0" />
-                  <span className="text-[11px] font-medium opacity-80">{error || message}</span>
+                  <span className="text-[11px] font-medium opacity-80">
+                    {error || message || (authError === 'OAuthAccountNotLinked' ? 'Account already exists with a different provider.' : authError)}
+                  </span>
                 </motion.div>
               )}
 
@@ -243,11 +247,21 @@ function LoginContent() {
             </div>
 
             <button
-              onClick={() => signIn('google', { callbackUrl: '/portal' })}
-              className="group w-full h-12 border border-foreground/[0.08] bg-foreground/[0.02] hover:bg-foreground/[0.06] flex items-center justify-center gap-3 transition-all hover:border-foreground/20"
+              onClick={async () => {
+                setIsGoogleLoading(true)
+                await signIn('google', { callbackUrl: '/dashboard' })
+              }}
+              disabled={isGoogleLoading}
+              className="group w-full h-12 border border-foreground/[0.08] bg-foreground/[0.02] hover:bg-foreground/[0.06] flex items-center justify-center gap-3 transition-all hover:border-foreground/20 disabled:opacity-50"
             >
-              <IconBrandGoogle className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-50 group-hover:opacity-100 transition-opacity" style={{ fontFamily: 'var(--font-malinton)' }}>Google</span>
+              {isGoogleLoading ? (
+                <div className="w-4 h-4 border-2 border-foreground/20 border-t-foreground/60 rounded-full animate-spin" />
+              ) : (
+                <IconBrandGoogle className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
+              )}
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] opacity-50 group-hover:opacity-100 transition-opacity" style={{ fontFamily: 'var(--font-malinton)' }}>
+                {isGoogleLoading ? 'Connecting...' : 'Continue with Google'}
+              </span>
             </button>
 
             {/* Bottom bar */}
