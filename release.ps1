@@ -4,15 +4,18 @@ Write-Host "`n[1/3] Building Windows Executable using electron-builder..." -Fore
 # Run the npm build command and pipe its output to standard output
 cmd.exe /c "npm run build-win"
 
-Write-Host "`n[2/3] Zipping the Meow App Executable..." -ForegroundColor Yellow
-# If the exe name updates, this wild card handles it as long as it starts with Meow and ends with .exe in downloads folder.
-# We'll stick to the exact name for safety or match the generated executable.
+Write-Host "`n[2/3] Preparing the Meow App Executable..." -ForegroundColor Yellow
+# Find the generated executable (e.g. "Meow 1.0.0.exe")
 $exePath = Get-ChildItem -Path "meow_web\public\downloads\Meow *.exe" | Select-Object -First 1
 if ($exePath) {
-    Compress-Archive -Path $exePath.FullName -DestinationPath "meow_web\public\downloads\meow-app.zip" -Force
-    Write-Host "✅ Zipped to meow-app.zip" -ForegroundColor Green
+    $targetPath = "meow_web\public\downloads\Meow.exe"
+    if (Test-Path $targetPath) {
+        Remove-Item $targetPath -Force
+    }
+    Rename-Item -Path $exePath.FullName -NewName "Meow.exe"
+    Write-Host "✅ Executable ready at meow_web\public\downloads\Meow.exe" -ForegroundColor Green
 } else {
-    Write-Host "❌ Could not find Meow executable to zip. Did the build fail?" -ForegroundColor Red
+    Write-Host "❌ Could not find Meow executable. Did the build fail?" -ForegroundColor Red
 }
 
 Write-Host "`n[3/3] Zipping the Browser Extension..." -ForegroundColor Yellow

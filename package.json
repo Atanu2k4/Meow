@@ -31,6 +31,7 @@
   "build": {
     "appId": "com.meow.app",
     "productName": "Meow",
+    "npmRebuild": false,
     "directories": {
       "output": "meow_web/public/downloads"
     },
